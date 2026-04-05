@@ -104,7 +104,7 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="p-6 max-w-3xl">
+    <div className="p-6 max-w-3xl h-full overflow-auto">
       <h1 className="text-lg font-semibold flex items-center gap-2 mb-6">
         <Settings size={20} />
         Paramètres

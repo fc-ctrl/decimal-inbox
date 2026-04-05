@@ -1,0 +1,63 @@
+- generic [ref=e24]:
+  - complementary [ref=e25]:
+    - generic [ref=e27]:
+      - img [ref=e28]
+      - generic [ref=e31]: Decimal Inbox
+      - generic [ref=e32]: v0.5.4
+    - navigation [ref=e33]:
+      - link "Inbox" [ref=e34] [cursor=pointer]:
+        - /url: /
+        - img [ref=e35]
+        - text: Inbox
+      - link "Composer" [active] [ref=e38] [cursor=pointer]:
+        - /url: /compose
+        - img [ref=e39]
+        - text: Composer
+      - link "Catégories" [ref=e44] [cursor=pointer]:
+        - /url: /categories
+        - img [ref=e45]
+        - text: Catégories
+      - link "Paramètres" [ref=e48] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e49]
+        - text: Paramètres
+    - generic [ref=e53]:
+      - generic [ref=e54]: fc@decimal-ia.com
+      - button "Déconnexion" [ref=e55]:
+        - img [ref=e56]
+  - main [ref=e59]:
+    - generic [ref=e653]:
+      - heading "Composer un email" [level=1] [ref=e654]:
+        - img [ref=e655]
+        - text: Composer un email
+      - generic [ref=e660]:
+        - generic [ref=e661]:
+          - generic [ref=e662]:
+            - generic [ref=e663]: Envoyer depuis
+            - combobox [ref=e664]:
+              - option "Gmail (fc@decimal-ia.com)" [selected]
+              - option "Outlook (fc@cosy-groupe.com)"
+          - generic [ref=e665]:
+            - generic [ref=e666]: Modèle IA
+            - combobox [ref=e667]:
+              - option "Haiku (rapide)"
+              - option "Sonnet (recommandé)" [selected]
+              - option "Opus (complexe)"
+        - generic [ref=e668]:
+          - generic [ref=e669]: Destinataire
+          - textbox "client@example.com" [ref=e670]
+        - generic [ref=e671]:
+          - generic [ref=e672]: Objet (optionnel — l'IA peut le générer)
+          - textbox "L'IA génère l'objet si vide" [ref=e673]
+        - generic [ref=e674]:
+          - generic [ref=e675]: Décris ce que tu veux envoyer
+          - 'textbox "Exemples : • Relance client sur proposition envoyée le 20 mars • Réponse SAV problème filtration piscine • Envoi devis rénovation piscine 8x4 • Mail de suivi après intervention" [ref=e676]':
+            - /placeholder: "Exemples :\n• Relance client sur proposition envoyée le 20 mars\n• Réponse SAV problème filtration piscine\n• Envoi devis rénovation piscine 8x4\n• Mail de suivi après intervention"
+        - generic [ref=e677]:
+          - generic [ref=e678]: Pièces jointes
+          - button "Joindre un fichier" [ref=e680]:
+            - img [ref=e681]
+            - text: Joindre un fichier
+        - button "Générer avec l'IA" [disabled] [ref=e683]:
+          - img [ref=e684]
+          - text: Générer avec l'IA

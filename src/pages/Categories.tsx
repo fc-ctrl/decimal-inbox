@@ -95,7 +95,7 @@ export default function Categories() {
   }
 
   return (
-    <div className="p-6 max-w-3xl">
+    <div className="p-6 max-w-3xl h-full overflow-auto">
       {/* Catégories */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">

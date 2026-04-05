@@ -1,0 +1,493 @@
+- generic [ref=e24]:
+  - complementary [ref=e25]:
+    - generic [ref=e27]:
+      - img [ref=e28]
+      - generic [ref=e31]: Decimal Inbox
+      - generic [ref=e32]: v0.5.4
+    - navigation [ref=e33]:
+      - link "Inbox" [ref=e34] [cursor=pointer]:
+        - /url: /
+        - img [ref=e35]
+        - text: Inbox
+      - link "Composer" [ref=e38] [cursor=pointer]:
+        - /url: /compose
+        - img [ref=e39]
+        - text: Composer
+      - link "Catégories" [ref=e44] [cursor=pointer]:
+        - /url: /categories
+        - img [ref=e45]
+        - text: Catégories
+      - link "Paramètres" [ref=e48] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e49]
+        - text: Paramètres
+    - generic [ref=e53]:
+      - generic [ref=e54]: fc@decimal-ia.com
+      - button "Déconnexion" [ref=e55]:
+        - img [ref=e56]
+  - main [ref=e59]:
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - heading "Inbox 25" [level=1] [ref=e64]:
+            - img [ref=e65]
+            - text: Inbox
+            - generic [ref=e68]: "25"
+          - button [ref=e69]:
+            - img [ref=e70]
+        - generic [ref=e75]:
+          - img [ref=e76]
+          - textbox "Rechercher..." [ref=e79]
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - img [ref=e82]
+            - combobox [ref=e84]:
+              - option "Toutes catégories" [selected]
+              - option "Commercial / Propale"
+              - option "SAV / Support"
+              - option "Relance"
+              - option "Litige"
+          - combobox [ref=e85]:
+            - option "Tous canaux" [selected]
+            - option "Gmail"
+            - option "Outlook"
+            - option "SMS"
+      - generic [ref=e86]:
+        - generic [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]: O
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]: Amazon.fr
+              - generic [ref=e93]: 05 avr. 15:14
+            - generic [ref=e94]: Nous avons trouvé quelque chose qui pourrait vous plaire
+            - generic [ref=e95]: Besoin d’un autre coup d’œil ? Découvrez des articles similaires à ce que vous avez récemment vu sur Amazon.͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+            - generic [ref=e96]:
+              - generic [ref=e97]: Commercial / Propale
+              - button [ref=e98]:
+                - img [ref=e99]
+              - button [ref=e101]:
+                - img [ref=e102]
+        - generic [ref=e106] [cursor=pointer]:
+          - generic [ref=e107]: O
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: testlitige@cosy-groupe.fr
+              - generic [ref=e111]: 05 avr. 14:21
+            - generic [ref=e112]: problème piscine
+            - generic [ref=e113]: Bonjour, Je prends note de votre retour suite à votre intervention. Toutefois, la présence d’une fuite dans un ouvrage réceptionné en août 2024 engage votre responsabilité au titre des garanties légales, notamment la garantie de parfait
+            - generic [ref=e114]:
+              - generic [ref=e115]: Litige
+              - button [ref=e116]:
+                - img [ref=e117]
+              - button [ref=e119]:
+                - img [ref=e120]
+        - generic [ref=e124] [cursor=pointer]:
+          - generic [ref=e125]: O
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: Amazon Marketplace
+              - generic [ref=e129]: 05 avr. 13:28
+            - generic [ref=e130]: Costanza, évaluerez-vous votre transaction sur amazon.fr ?
+            - generic [ref=e131]: Bonjour Costanza,pourriez-vous prendre une minute pour partager votre expérience ? Vous avez commandé Oxeo Aspirateur Eau et poussière Professionnel 3000W – 70 litres – Tri Moteurs - sans Sac - cuve 70L - livré avec Accessoires (Neuf) Novoo Fra
+            - generic [ref=e132]:
+              - generic [ref=e133]: SAV / Support
+              - button [ref=e134]:
+                - img [ref=e135]
+              - button [ref=e137]:
+                - img [ref=e138]
+        - generic [ref=e142] [cursor=pointer]:
+          - generic [ref=e143]: O
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146]: Tommy Hilfiger
+              - generic [ref=e147]: 05 avr. 13:05
+            - generic [ref=e148]: Surprise ! Voici votre cadeau d'anniversaire.
+            - generic [ref=e149]: Prenez de l'avance avec votre remise Tommy Together. ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+            - generic [ref=e150]:
+              - generic [ref=e151]: Commercial / Propale
+              - button [ref=e152]:
+                - img [ref=e153]
+              - button [ref=e155]:
+                - img [ref=e156]
+        - generic [ref=e160] [cursor=pointer]:
+          - generic [ref=e161]: O
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - generic [ref=e164]: IHM - Moineau Instruments
+              - generic [ref=e165]: 05 avr. 12:21
+            - generic [ref=e166]: Deux ans déjà... Il est temps de revenir chez MOINEAU Instruments ⏳
+            - generic [ref=e167]: Votre expertise en mesure nous a manqué. Vous pouvez vous désabonner de nos e-mails ici. Bonjour fabrice, Deux ans se sont écoulés depuis votre dernière visite chez MOINEAU Instruments. Beaucoup de choses ont changé, et nous somme
+            - generic [ref=e168]:
+              - generic [ref=e169]: Commercial / Propale
+              - button [ref=e170]:
+                - img [ref=e171]
+              - button [ref=e173]:
+                - img [ref=e174]
+        - generic [ref=e178] [cursor=pointer]:
+          - generic [ref=e179]: O
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - generic [ref=e182]: fc@decimal-ia.com
+              - generic [ref=e183]: 05 avr. 12:21
+            - generic [ref=e184]: Relance Ã¢Â€Â“ Votre devis piscine du 20 mars
+            - generic [ref=e185]: "--- Bonjour Monsieur Aubert, J'espère que vous allez bien. Je vous recontacte suite à l'envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l'occasion de la consulter et d'envisager les prochaines éta"
+            - generic [ref=e186]:
+              - generic [ref=e187]: Relance
+              - button [ref=e188]:
+                - img [ref=e189]
+              - button [ref=e191]:
+                - img [ref=e192]
+        - generic [ref=e196] [cursor=pointer]:
+          - generic [ref=e197]: G
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - generic [ref=e200]: Vous
+              - generic [ref=e201]: 05 avr. 12:21
+            - generic [ref=e202]: Relance – Votre devis piscine du 20 mars
+            - generic [ref=e203]: "--- Bonjour Monsieur Aubert, J'espère que vous allez bien. Je vous recontacte suite à l'envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l'occasion de la consulter et d'envisager les prochaines étapes ? Nous serions ravis de répondre à vos questions ou d'affiner notre offre selon vos souhaits. Avant la belle saison, c'est le moment idéal pour lancer les travaux et profiter rapidement de votre nouvelle piscine. Nous vous proposons : - Un entreti"
+            - generic [ref=e204]:
+              - generic [ref=e205]: Commercial / Propale
+              - button [ref=e206]:
+                - img [ref=e207]
+              - button [ref=e209]:
+                - img [ref=e210]
+        - generic [ref=e214] [cursor=pointer]:
+          - generic [ref=e215]: G
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - generic [ref=e218]: fc@decimal-ia.com
+              - generic [ref=e219]: 05 avr. 12:21
+            - generic [ref=e220]: Relance Ã¢Â€Â“ Votre devis piscine du 20 mars
+            - generic [ref=e221]: "--- Bonjour Monsieur Aubert, J&#39;espère que vous allez bien. Je vous recontacte suite à l&#39;envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l&#39;"
+            - generic [ref=e222]:
+              - generic [ref=e223]: Relance
+              - button [ref=e224]:
+                - img [ref=e225]
+              - button [ref=e227]:
+                - img [ref=e228]
+        - generic [ref=e232] [cursor=pointer]:
+          - generic [ref=e233]: G
+          - generic [ref=e234]:
+            - generic [ref=e235]:
+              - generic [ref=e236]: Vercel
+              - generic [ref=e237]: 05 avr. 12:20
+            - generic [ref=e238]: Failed production deployment on team 'fc-ctrl's projects'
+            - generic [ref=e239]: Hi fc-ctrl, There was an error deploying decimal-inbox to the production environment on fc-ctrl&#39;s projects. See deployment details You can also view latest deployments for branch master. If you
+            - generic [ref=e240]:
+              - generic [ref=e241]: SAV / Support
+              - button [ref=e242]:
+                - img [ref=e243]
+              - button [ref=e245]:
+                - img [ref=e246]
+        - generic [ref=e250] [cursor=pointer]:
+          - generic [ref=e251]: O
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - generic [ref=e254]: FLORENCE FERON
+              - generic [ref=e255]: 05 avr. 11:24
+            - generic [ref=e256]: C'est Madame FERON Florence au sujet du Don!!!
+            - generic [ref=e257]: Bonjour, Je suis veuve Mme FERON Florence, médecin sans frontières. J'ai 79 ans, atteint du cancer, je présume que cette maladie et la vieillesse me consument. Les deux enfants que j'ai eus dans ma vie ainsi que mon défunt époux qui fut négociant au Qata
+            - generic [ref=e258]:
+              - button [ref=e259]:
+                - img [ref=e260]
+              - button [ref=e262]:
+                - img [ref=e263]
+        - generic [ref=e267] [cursor=pointer]:
+          - generic [ref=e268]: O
+          - generic [ref=e269]:
+            - generic [ref=e270]:
+              - generic [ref=e271]: noCRM.io
+              - generic [ref=e272]: 05 avr. 11:12
+            - generic [ref=e273]: Votre compte sera supprimé dans 10 jours.
+            - generic [ref=e274]: cosypiscine.nocrm.io Votre compte sera supprimé dans 10 jours. Compte cosypiscine.nocrm.io Bonjour fabrice, Votre compte va être supprimé dans 10 jours, et toutes vos données seront écrasées ! Si vous ne voulez pas que vos données soient su
+            - generic [ref=e275]:
+              - generic [ref=e276]: Litige
+              - button [ref=e277]:
+                - img [ref=e278]
+              - button [ref=e280]:
+                - img [ref=e281]
+        - generic [ref=e285] [cursor=pointer]:
+          - generic [ref=e286]: O
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e289]: Kobo
+              - generic [ref=e290]: 05 avr. 11:10
+            - generic [ref=e291]: Profitez du Mois du Polar 2026
+            - generic [ref=e292]: Sélection thriller à prix cadeau | ÉVÉNEMENT De 9,99 € À 3,99 € De 14,99 € À 5,99 € De 6,99 € À 2,49 € De 5,99 € À 1,99 € De 16,99 € À 6,49 € De 8,49 € À 2,99 € De 8,99 € À 3,49 €
+            - generic [ref=e293]:
+              - generic [ref=e294]: Commercial / Propale
+              - button [ref=e295]:
+                - img [ref=e296]
+              - button [ref=e298]:
+                - img [ref=e299]
+        - generic [ref=e303] [cursor=pointer]:
+          - generic [ref=e304]: O
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - generic [ref=e307]: Communauté IA (Skool)
+              - generic [ref=e308]: 05 avr. 10:21
+            - generic [ref=e309]: 1 event happening tomorrow
+            - generic [ref=e310]: Communauté IA 1 event happening tomorrow Yass Q&R📞 Monday, April 6th • 6:30pm - 7:30pm (Paris time) Je réponds à toutes vos questions pendant ce live hebdomadaire, l'objectif étant d'aider le maximum de personnes et faciliter l'échange :)
+            - generic [ref=e311]:
+              - button [ref=e312]:
+                - img [ref=e313]
+              - button [ref=e315]:
+                - img [ref=e316]
+        - generic [ref=e320] [cursor=pointer]:
+          - generic [ref=e321]: O
+          - generic [ref=e322]:
+            - generic [ref=e323]:
+              - generic [ref=e324]: LJ MotorSport
+              - generic [ref=e325]: 05 avr. 10:05
+            - generic [ref=e326]: Les nouveautés LJMotorSport !
+            - generic [ref=e327]: Les nouveautés LJMotorSport !‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+            - generic [ref=e328]:
+              - generic [ref=e329]: Commercial / Propale
+              - button [ref=e330]:
+                - img [ref=e331]
+              - button [ref=e333]:
+                - img [ref=e334]
+        - generic [ref=e338] [cursor=pointer]:
+          - generic [ref=e339]: G
+          - generic [ref=e340]:
+            - generic [ref=e341]:
+              - generic [ref=e342]: Claude Team
+              - generic [ref=e343]: 05 avr. 10:00
+            - generic [ref=e344]: A credit on us, plus discounts on extra usage
+            - generic [ref=e345]: Hi, We&#39;re offering you a one-time credit for extra usage to your account, equal to your monthly subscription price. Redeem it here by April 17. Once claimed, it&#39;s good for 90 days across Claude
+            - generic [ref=e346]:
+              - generic [ref=e347]: Commercial / Propale
+              - button [ref=e348]:
+                - img [ref=e349]
+              - button [ref=e351]:
+                - img [ref=e352]
+        - generic [ref=e356] [cursor=pointer]:
+          - generic [ref=e357]: O
+          - generic [ref=e358]:
+            - generic [ref=e359]:
+              - generic [ref=e360]: Maxi Zoo
+              - generic [ref=e361]: 05 avr. 09:11
+            - generic [ref=e362]: "-15% dès 79€ : la chasse à l'offre est ouverte ! 🐣"
+            - generic [ref=e363]: "A vos paniers, prêts... partez ! Online Version Nos marques exclusives | Maxi Zoo Friends | Trouver votre magasin 🔥 EXCLU WEB : A vos paniers, prêts... partez ! 🐣 -15% dès 79€ d’achat avec le code MAXI15 💻Sur TOUT* le site ! R"
+            - generic [ref=e364]:
+              - generic [ref=e365]: Commercial / Propale
+              - button [ref=e366]:
+                - img [ref=e367]
+              - button [ref=e369]:
+                - img [ref=e370]
+        - generic [ref=e374] [cursor=pointer]:
+          - generic [ref=e375]: O
+          - generic [ref=e376]:
+            - generic [ref=e377]:
+              - generic [ref=e378]: Tommy Hilfiger
+              - generic [ref=e379]: 05 avr. 08:26
+            - generic [ref=e380]: "Nouveau : notre sélection de tenues de soirée."
+            - generic [ref=e381]: "Jusqu'à -50% : c'est bientôt fini ! ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏"
+            - generic [ref=e382]:
+              - generic [ref=e383]: Commercial / Propale
+              - button [ref=e384]:
+                - img [ref=e385]
+              - button [ref=e387]:
+                - img [ref=e388]
+        - generic [ref=e392] [cursor=pointer]:
+          - generic [ref=e393]: O
+          - generic [ref=e394]:
+            - generic [ref=e395]:
+              - generic [ref=e396]: Info Compte Express
+              - generic [ref=e397]: 05 avr. 07:23
+            - generic [ref=e398]: Nouveaux documents électroniques à votre disposition
+            - generic [ref=e399]: Bonjour, Nous vous informons que de nouveaux documents sont disponibles dans votre espace de banque à distance pour FSECL ESPAGNE. - Extrait de compte - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de votre
+            - generic [ref=e400]:
+              - generic [ref=e401]: SAV / Support
+              - button [ref=e402]:
+                - img [ref=e403]
+              - button [ref=e405]:
+                - img [ref=e406]
+        - generic [ref=e410] [cursor=pointer]:
+          - generic [ref=e411]: O
+          - generic [ref=e412]:
+            - generic [ref=e413]:
+              - generic [ref=e414]: Masterlib - Masterlib
+              - generic [ref=e415]: 05 avr. 07:08
+            - generic [ref=e416]: Vos notifications vous attendent — Ne laissez rien passer !
+            - generic [ref=e417]: "Bonjour, Connectez-vous pour lire vos notifications : Projet MOE_Matthias Clement & Clelia Piaton 2 message(s) non lu(s) Ne perdez pas une minute, connectez-vous ici : Masterlib Astuce: consultez vos notifications rapidement pour éviter les r"
+            - generic [ref=e418]:
+              - generic [ref=e419]: SAV / Support
+              - button [ref=e420]:
+                - img [ref=e421]
+              - button [ref=e423]:
+                - img [ref=e424]
+        - generic [ref=e428] [cursor=pointer]:
+          - generic [ref=e429]: O
+          - generic [ref=e430]:
+            - generic [ref=e431]:
+              - generic [ref=e432]: Info Compte Express
+              - generic [ref=e433]: 05 avr. 06:55
+            - generic [ref=e434]: Nouveaux documents électroniques à votre disposition
+            - generic [ref=e435]: Bonjour, Nous vous informons que de nouveaux documents sont disponibles dans votre espace de banque à distance pour COSTANZA FINANCES. - Extrait de compte - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de vo
+            - generic [ref=e436]:
+              - button [ref=e437]:
+                - img [ref=e438]
+              - button [ref=e440]:
+                - img [ref=e441]
+        - generic [ref=e445] [cursor=pointer]:
+          - generic [ref=e446]: O
+          - generic [ref=e447]:
+            - generic [ref=e448]:
+              - generic [ref=e449]: Outlook
+              - generic [ref=e450]: 05 avr. 04:49
+            - generic [ref=e451]: "Synthèse quotidienne des réactions : dimanche 5 avril 2026"
+            - generic [ref=e452]: Microsoft Outlook Christophe Gay a réagi à votre message sam. 04/04/2026 10:35:00 Message Monsieur Breysse Salut Chris Cijoint un message de Monsieur Plutôt positif le type Bonjour Monsieur Costanza, Dans la suite de notre entretien, je vous
+            - generic [ref=e453]:
+              - button [ref=e454]:
+                - img [ref=e455]
+              - button [ref=e457]:
+                - img [ref=e458]
+        - generic [ref=e462] [cursor=pointer]:
+          - generic [ref=e463]: O
+          - generic [ref=e464]:
+            - generic [ref=e465]:
+              - generic [ref=e466]: so_send_journal_fond@sips-services.com
+              - generic [ref=e467]: 05 avr. 00:28
+            - generic [ref=e468]: liste des opérations effectuées
+            - generic [ref=e469]:
+              - generic [ref=e470]: SAV / Support
+              - button [ref=e471]:
+                - img [ref=e472]
+              - button [ref=e474]:
+                - img [ref=e475]
+        - generic [ref=e479] [cursor=pointer]:
+          - generic [ref=e480]: O
+          - generic [ref=e481]:
+            - generic [ref=e482]:
+              - generic [ref=e483]: so_send_journal_fond@sips-services.com
+              - generic [ref=e484]: 05 avr. 00:19
+            - generic [ref=e485]: liste des paiements traités
+            - generic [ref=e486]:
+              - generic [ref=e487]: SAV / Support
+              - button [ref=e488]:
+                - img [ref=e489]
+              - button [ref=e491]:
+                - img [ref=e492]
+        - generic [ref=e496] [cursor=pointer]:
+          - generic [ref=e497]: O
+          - generic [ref=e498]:
+            - generic [ref=e499]:
+              - generic [ref=e500]: Uber
+              - generic [ref=e501]: 04 avr. 23:53
+            - generic [ref=e502]: Vos démarches pour rejoindre la plateforme Uber
+            - generic [ref=e503]: Bonjour Fabrice, Afin de vous accompagner au mieux, nous vous proposons de sélectionner la situation qui vous correspond. J'aimerais discuter avec un conseiller Je suis inscrit à l'examen VTC J'hésite à m'inscrire à l'examen VTC
+            - generic [ref=e504]:
+              - generic [ref=e505]: Commercial / Propale
+              - button [ref=e506]:
+                - img [ref=e507]
+              - button [ref=e509]:
+                - img [ref=e510]
+        - generic [ref=e514] [cursor=pointer]:
+          - generic [ref=e515]: O
+          - generic [ref=e516]:
+            - generic [ref=e517]:
+              - generic [ref=e518]: Info Compte Express
+              - generic [ref=e519]: 04 avr. 23:43
+            - generic [ref=e520]: Nouveaux documents électroniques à votre disposition
+            - generic [ref=e521]: Bonjour, Nous vous informons qu'un nouveau document est disponible dans votre espace de banque à distance pour COSY. - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de votre site ou application mobile. Votr
+            - generic [ref=e522]:
+              - generic [ref=e523]: SAV / Support
+              - button [ref=e524]:
+                - img [ref=e525]
+              - button [ref=e527]:
+                - img [ref=e528]
+        - generic [ref=e532] [cursor=pointer]:
+          - generic [ref=e533]: O
+          - generic [ref=e534]:
+            - generic [ref=e535]:
+              - generic [ref=e536]: Emma | GetYourGuide
+              - generic [ref=e537]: 04 avr. 22:56
+            - generic [ref=e538]: 🌈 Ces 10 destinations aux coloris éblouissants ne sont pas le fruit de l’IA
+            - generic [ref=e539]: "Mais aussi : les plus belles îles d’Italie. ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌"
+            - generic [ref=e540]:
+              - generic [ref=e541]: Commercial / Propale
+              - button [ref=e542]:
+                - img [ref=e543]
+              - button [ref=e545]:
+                - img [ref=e546]
+        - generic [ref=e550] [cursor=pointer]:
+          - generic [ref=e551]: O
+          - generic [ref=e552]:
+            - generic [ref=e553]:
+              - generic [ref=e554]: Discord
+              - generic [ref=e555]: 04 avr. 22:56
+            - generic [ref=e556]: Tu as manqué des messages sur VISION IA
+            - generic [ref=e557]: "Tu as reçu 4 nouveaux messages #vérification (VISION IA) Voir les messages #accueil (VISION IA) Voir les messages Besoin d'aide ? Contacte notre équipe d'assistance ou envoie-nous un message sur X @discord. Tu souhaites nous faire part de"
+            - generic [ref=e558]:
+              - button [ref=e559]:
+                - img [ref=e560]
+              - button [ref=e562]:
+                - img [ref=e563]
+        - generic [ref=e567] [cursor=pointer]:
+          - generic [ref=e568]: O
+          - generic [ref=e569]:
+            - generic [ref=e570]:
+              - generic [ref=e571]: LinkedIn
+              - generic [ref=e572]: 04 avr. 21:58
+            - generic [ref=e573]: Fabrice, votre profil attire l’attention
+            - generic [ref=e574]: Vous avez été remarqué(e) par une personne travaillant chez LÉA COMPOSITES ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+            - generic [ref=e575]:
+              - button [ref=e576]:
+                - img [ref=e577]
+              - button [ref=e579]:
+                - img [ref=e580]
+        - generic [ref=e584] [cursor=pointer]:
+          - generic [ref=e585]: O
+          - generic [ref=e586]:
+            - generic [ref=e587]:
+              - generic [ref=e588]: LinkedIn
+              - generic [ref=e589]: 04 avr. 19:58
+            - generic [ref=e590]: "Maxime PATOU, Account Executive Enterprise - Ontario & Québec, a réagi à un post : C’est vendredi ! 🃏 10 ans…"
+            - generic [ref=e591]: C’est vendredi ! 🃏 10 ans… ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+            - generic [ref=e592]:
+              - button [ref=e593]:
+                - img [ref=e594]
+              - button [ref=e596]:
+                - img [ref=e597]
+        - generic [ref=e601] [cursor=pointer]:
+          - generic [ref=e602]: O
+          - generic [ref=e603]:
+            - generic [ref=e604]:
+              - generic [ref=e605]: LinkedIn
+              - generic [ref=e606]: 04 avr. 19:32
+            - generic [ref=e607]: Vous avez 1 nouvelle invitation
+            - generic [ref=e608]: Vous avez 1 nouvelle invitation ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+            - generic [ref=e609]:
+              - button [ref=e610]:
+                - img [ref=e611]
+              - button [ref=e613]:
+                - img [ref=e614]
+        - generic [ref=e618] [cursor=pointer]:
+          - generic [ref=e619]: G
+          - generic [ref=e620]:
+            - generic [ref=e621]:
+              - generic [ref=e622]: fc@decimal-ia.com
+              - generic [ref=e623]: 04 avr. 17:06
+            - generic [ref=e624]: nouveau client
+            - generic [ref=e625]: type client --- This email was sent automatically with n8n
+            - generic [ref=e626]:
+              - generic [ref=e627]: Commercial / Propale
+              - button [ref=e628]:
+                - img [ref=e629]
+              - button [ref=e631]:
+                - img [ref=e632]
+        - generic [ref=e636] [cursor=pointer]:
+          - generic [ref=e637]: G
+          - generic [ref=e638]:
+            - generic [ref=e639]:
+              - generic [ref=e640]: fc@decimal-ia.com
+              - generic [ref=e641]: 04 avr. 16:13
+            - generic [ref=e642]: nouveau client
+            - generic [ref=e643]: type client --- This email was sent automatically with n8n
+            - generic [ref=e644]:
+              - generic [ref=e645]: Commercial / Propale
+              - button [ref=e646]:
+                - img [ref=e647]
+              - button [ref=e649]:
+                - img [ref=e650]

@@ -1,0 +1,16 @@
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - img [ref=e8]
+      - heading "Decimal Inbox" [level=1] [ref=e11]
+    - paragraph [ref=e12]: Connectez-vous pour continuer
+  - generic [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]: Email
+      - textbox "votre@email.com" [active] [ref=e16]
+    - generic [ref=e17]:
+      - generic [ref=e18]: Mot de passe
+      - textbox "Votre mot de passe" [ref=e19]
+    - button "Se connecter" [ref=e20]:
+      - img [ref=e21]
+      - text: Se connecter

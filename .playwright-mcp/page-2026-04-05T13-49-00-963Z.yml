@@ -1,0 +1,562 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e8]:
+      - img [ref=e9]
+      - generic [ref=e12]: Decimal Inbox
+      - generic [ref=e13]: v0.5.4
+    - navigation [ref=e14]:
+      - link "Inbox" [ref=e15] [cursor=pointer]:
+        - /url: /
+        - img [ref=e16]
+        - text: Inbox
+      - link "Composer" [ref=e19] [cursor=pointer]:
+        - /url: /compose
+        - img [ref=e20]
+        - text: Composer
+      - link "Catégories" [ref=e25] [cursor=pointer]:
+        - /url: /categories
+        - img [ref=e26]
+        - text: Catégories
+      - link "Paramètres" [ref=e29] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e30]
+        - text: Paramètres
+    - generic [ref=e34]:
+      - generic [ref=e35]: fc@decimal-ia.com
+      - button "Déconnexion" [ref=e36]:
+        - img [ref=e37]
+  - main [ref=e40]:
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - heading "Inbox 25" [level=1] [ref=e45]:
+              - img [ref=e46]
+              - text: Inbox
+              - generic [ref=e49]: "25"
+            - button [ref=e50]:
+              - img [ref=e51]
+          - generic [ref=e56]:
+            - img [ref=e57]
+            - textbox "Rechercher..." [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - img [ref=e63]
+              - combobox [ref=e65]:
+                - option "Toutes catégories" [selected]
+                - option "Commercial / Propale"
+                - option "SAV / Support"
+                - option "Relance"
+                - option "Litige"
+            - combobox [ref=e66]:
+              - option "Tous canaux" [selected]
+              - option "Gmail"
+              - option "Outlook"
+              - option "SMS"
+        - generic [ref=e67]:
+          - generic [ref=e69] [cursor=pointer]:
+            - generic [ref=e70]: O
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - generic [ref=e73]: Amazon.fr
+                - generic [ref=e74]: 05 avr. 15:14
+              - generic [ref=e75]: Nous avons trouvé quelque chose qui pourrait vous plaire
+              - generic [ref=e76]: Besoin d’un autre coup d’œil ? Découvrez des articles similaires à ce que vous avez récemment vu sur Amazon.͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+              - generic [ref=e77]:
+                - generic [ref=e78]: Commercial / Propale
+                - button [ref=e79]:
+                  - img [ref=e80]
+                - button [ref=e82]:
+                  - img [ref=e83]
+          - generic [ref=e87] [cursor=pointer]:
+            - generic [ref=e88]: O
+            - generic [ref=e89]:
+              - generic [ref=e90]:
+                - generic [ref=e91]: testlitige@cosy-groupe.fr
+                - generic [ref=e92]: 05 avr. 14:21
+              - generic [ref=e93]: problème piscine
+              - generic [ref=e94]: Bonjour, Je prends note de votre retour suite à votre intervention. Toutefois, la présence d’une fuite dans un ouvrage réceptionné en août 2024 engage votre responsabilité au titre des garanties légales, notamment la garantie de parfait
+              - generic [ref=e95]:
+                - generic [ref=e96]: Litige
+                - button [ref=e97]:
+                  - img [ref=e98]
+                - button [ref=e100]:
+                  - img [ref=e101]
+          - generic [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]: O
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - generic [ref=e109]: Amazon Marketplace
+                - generic [ref=e110]: 05 avr. 13:28
+              - generic [ref=e111]: Costanza, évaluerez-vous votre transaction sur amazon.fr ?
+              - generic [ref=e112]: Bonjour Costanza,pourriez-vous prendre une minute pour partager votre expérience ? Vous avez commandé Oxeo Aspirateur Eau et poussière Professionnel 3000W – 70 litres – Tri Moteurs - sans Sac - cuve 70L - livré avec Accessoires (Neuf) Novoo Fra
+              - generic [ref=e113]:
+                - generic [ref=e114]: SAV / Support
+                - button [ref=e115]:
+                  - img [ref=e116]
+                - button [ref=e118]:
+                  - img [ref=e119]
+          - generic [ref=e123] [cursor=pointer]:
+            - generic [ref=e124]: O
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - generic [ref=e127]: Tommy Hilfiger
+                - generic [ref=e128]: 05 avr. 13:05
+              - generic [ref=e129]: Surprise ! Voici votre cadeau d'anniversaire.
+              - generic [ref=e130]: Prenez de l'avance avec votre remise Tommy Together. ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+              - generic [ref=e131]:
+                - generic [ref=e132]: Commercial / Propale
+                - button [ref=e133]:
+                  - img [ref=e134]
+                - button [ref=e136]:
+                  - img [ref=e137]
+          - generic [ref=e141] [cursor=pointer]:
+            - generic [ref=e142]: O
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - generic [ref=e145]: IHM - Moineau Instruments
+                - generic [ref=e146]: 05 avr. 12:21
+              - generic [ref=e147]: Deux ans déjà... Il est temps de revenir chez MOINEAU Instruments ⏳
+              - generic [ref=e148]: Votre expertise en mesure nous a manqué. Vous pouvez vous désabonner de nos e-mails ici. Bonjour fabrice, Deux ans se sont écoulés depuis votre dernière visite chez MOINEAU Instruments. Beaucoup de choses ont changé, et nous somme
+              - generic [ref=e149]:
+                - generic [ref=e150]: Commercial / Propale
+                - button [ref=e151]:
+                  - img [ref=e152]
+                - button [ref=e154]:
+                  - img [ref=e155]
+          - generic [ref=e159] [cursor=pointer]:
+            - generic [ref=e160]: O
+            - generic [ref=e161]:
+              - generic [ref=e162]:
+                - generic [ref=e163]: fc@decimal-ia.com
+                - generic [ref=e164]: 05 avr. 12:21
+              - generic [ref=e165]: Relance Ã¢Â€Â“ Votre devis piscine du 20 mars
+              - generic [ref=e166]: "--- Bonjour Monsieur Aubert, J'espère que vous allez bien. Je vous recontacte suite à l'envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l'occasion de la consulter et d'envisager les prochaines éta"
+              - generic [ref=e167]:
+                - generic [ref=e168]: Relance
+                - button [ref=e169]:
+                  - img [ref=e170]
+                - button [ref=e172]:
+                  - img [ref=e173]
+          - generic [ref=e177] [cursor=pointer]:
+            - generic [ref=e178]: G
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - generic [ref=e181]: Vous
+                - generic [ref=e182]: 05 avr. 12:21
+              - generic [ref=e183]: Relance – Votre devis piscine du 20 mars
+              - generic [ref=e184]: "--- Bonjour Monsieur Aubert, J'espère que vous allez bien. Je vous recontacte suite à l'envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l'occasion de la consulter et d'envisager les prochaines étapes ? Nous serions ravis de répondre à vos questions ou d'affiner notre offre selon vos souhaits. Avant la belle saison, c'est le moment idéal pour lancer les travaux et profiter rapidement de votre nouvelle piscine. Nous vous proposons : - Un entreti"
+              - generic [ref=e185]:
+                - generic [ref=e186]: Commercial / Propale
+                - button [ref=e187]:
+                  - img [ref=e188]
+                - button [ref=e190]:
+                  - img [ref=e191]
+          - generic [ref=e195] [cursor=pointer]:
+            - generic [ref=e196]: G
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - generic [ref=e199]: fc@decimal-ia.com
+                - generic [ref=e200]: 05 avr. 12:21
+              - generic [ref=e201]: Relance Ã¢Â€Â“ Votre devis piscine du 20 mars
+              - generic [ref=e202]: "--- Bonjour Monsieur Aubert, J&#39;espère que vous allez bien. Je vous recontacte suite à l&#39;envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l&#39;"
+              - generic [ref=e203]:
+                - generic [ref=e204]: Relance
+                - button [ref=e205]:
+                  - img [ref=e206]
+                - button [ref=e208]:
+                  - img [ref=e209]
+          - generic [ref=e213] [cursor=pointer]:
+            - generic [ref=e214]: G
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - generic [ref=e217]: Vercel
+                - generic [ref=e218]: 05 avr. 12:20
+              - generic [ref=e219]: Failed production deployment on team 'fc-ctrl's projects'
+              - generic [ref=e220]: Hi fc-ctrl, There was an error deploying decimal-inbox to the production environment on fc-ctrl&#39;s projects. See deployment details You can also view latest deployments for branch master. If you
+              - generic [ref=e221]:
+                - generic [ref=e222]: SAV / Support
+                - button [ref=e223]:
+                  - img [ref=e224]
+                - button [ref=e226]:
+                  - img [ref=e227]
+          - generic [ref=e231] [cursor=pointer]:
+            - generic [ref=e232]: O
+            - generic [ref=e233]:
+              - generic [ref=e234]:
+                - generic [ref=e235]: FLORENCE FERON
+                - generic [ref=e236]: 05 avr. 11:24
+              - generic [ref=e237]: C'est Madame FERON Florence au sujet du Don!!!
+              - generic [ref=e238]: Bonjour, Je suis veuve Mme FERON Florence, médecin sans frontières. J'ai 79 ans, atteint du cancer, je présume que cette maladie et la vieillesse me consument. Les deux enfants que j'ai eus dans ma vie ainsi que mon défunt époux qui fut négociant au Qata
+              - generic [ref=e239]:
+                - button [ref=e240]:
+                  - img [ref=e241]
+                - button [ref=e243]:
+                  - img [ref=e244]
+          - generic [ref=e248] [cursor=pointer]:
+            - generic [ref=e249]: O
+            - generic [ref=e250]:
+              - generic [ref=e251]:
+                - generic [ref=e252]: noCRM.io
+                - generic [ref=e253]: 05 avr. 11:12
+              - generic [ref=e254]: Votre compte sera supprimé dans 10 jours.
+              - generic [ref=e255]: cosypiscine.nocrm.io Votre compte sera supprimé dans 10 jours. Compte cosypiscine.nocrm.io Bonjour fabrice, Votre compte va être supprimé dans 10 jours, et toutes vos données seront écrasées ! Si vous ne voulez pas que vos données soient su
+              - generic [ref=e256]:
+                - generic [ref=e257]: Litige
+                - button [ref=e258]:
+                  - img [ref=e259]
+                - button [ref=e261]:
+                  - img [ref=e262]
+          - generic [ref=e266] [cursor=pointer]:
+            - generic [ref=e267]: O
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - generic [ref=e270]: Kobo
+                - generic [ref=e271]: 05 avr. 11:10
+              - generic [ref=e272]: Profitez du Mois du Polar 2026
+              - generic [ref=e273]: Sélection thriller à prix cadeau | ÉVÉNEMENT De 9,99 € À 3,99 € De 14,99 € À 5,99 € De 6,99 € À 2,49 € De 5,99 € À 1,99 € De 16,99 € À 6,49 € De 8,49 € À 2,99 € De 8,99 € À 3,49 €
+              - generic [ref=e274]:
+                - generic [ref=e275]: Commercial / Propale
+                - button [ref=e276]:
+                  - img [ref=e277]
+                - button [ref=e279]:
+                  - img [ref=e280]
+          - generic [ref=e284] [cursor=pointer]:
+            - generic [ref=e285]: O
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - generic [ref=e288]: Communauté IA (Skool)
+                - generic [ref=e289]: 05 avr. 10:21
+              - generic [ref=e290]: 1 event happening tomorrow
+              - generic [ref=e291]: Communauté IA 1 event happening tomorrow Yass Q&R📞 Monday, April 6th • 6:30pm - 7:30pm (Paris time) Je réponds à toutes vos questions pendant ce live hebdomadaire, l'objectif étant d'aider le maximum de personnes et faciliter l'échange :)
+              - generic [ref=e292]:
+                - button [ref=e293]:
+                  - img [ref=e294]
+                - button [ref=e296]:
+                  - img [ref=e297]
+          - generic [ref=e301] [cursor=pointer]:
+            - generic [ref=e302]: O
+            - generic [ref=e303]:
+              - generic [ref=e304]:
+                - generic [ref=e305]: LJ MotorSport
+                - generic [ref=e306]: 05 avr. 10:05
+              - generic [ref=e307]: Les nouveautés LJMotorSport !
+              - generic [ref=e308]: Les nouveautés LJMotorSport !‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+              - generic [ref=e309]:
+                - generic [ref=e310]: Commercial / Propale
+                - button [ref=e311]:
+                  - img [ref=e312]
+                - button [ref=e314]:
+                  - img [ref=e315]
+          - generic [ref=e319] [cursor=pointer]:
+            - generic [ref=e320]: G
+            - generic [ref=e321]:
+              - generic [ref=e322]:
+                - generic [ref=e323]: Claude Team
+                - generic [ref=e324]: 05 avr. 10:00
+              - generic [ref=e325]: A credit on us, plus discounts on extra usage
+              - generic [ref=e326]: Hi, We&#39;re offering you a one-time credit for extra usage to your account, equal to your monthly subscription price. Redeem it here by April 17. Once claimed, it&#39;s good for 90 days across Claude
+              - generic [ref=e327]:
+                - generic [ref=e328]: Commercial / Propale
+                - button [ref=e329]:
+                  - img [ref=e330]
+                - button [ref=e332]:
+                  - img [ref=e333]
+          - generic [ref=e337] [cursor=pointer]:
+            - generic [ref=e338]: O
+            - generic [ref=e339]:
+              - generic [ref=e340]:
+                - generic [ref=e341]: Maxi Zoo
+                - generic [ref=e342]: 05 avr. 09:11
+              - generic [ref=e343]: "-15% dès 79€ : la chasse à l'offre est ouverte ! 🐣"
+              - generic [ref=e344]: "A vos paniers, prêts... partez ! Online Version Nos marques exclusives | Maxi Zoo Friends | Trouver votre magasin 🔥 EXCLU WEB : A vos paniers, prêts... partez ! 🐣 -15% dès 79€ d’achat avec le code MAXI15 💻Sur TOUT* le site ! R"
+              - generic [ref=e345]:
+                - generic [ref=e346]: Commercial / Propale
+                - button [ref=e347]:
+                  - img [ref=e348]
+                - button [ref=e350]:
+                  - img [ref=e351]
+          - generic [ref=e355] [cursor=pointer]:
+            - generic [ref=e356]: O
+            - generic [ref=e357]:
+              - generic [ref=e358]:
+                - generic [ref=e359]: Tommy Hilfiger
+                - generic [ref=e360]: 05 avr. 08:26
+              - generic [ref=e361]: "Nouveau : notre sélection de tenues de soirée."
+              - generic [ref=e362]: "Jusqu'à -50% : c'est bientôt fini ! ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏"
+              - generic [ref=e363]:
+                - generic [ref=e364]: Commercial / Propale
+                - button [ref=e365]:
+                  - img [ref=e366]
+                - button [ref=e368]:
+                  - img [ref=e369]
+          - generic [ref=e373] [cursor=pointer]:
+            - generic [ref=e374]: O
+            - generic [ref=e375]:
+              - generic [ref=e376]:
+                - generic [ref=e377]: Info Compte Express
+                - generic [ref=e378]: 05 avr. 07:23
+              - generic [ref=e379]: Nouveaux documents électroniques à votre disposition
+              - generic [ref=e380]: Bonjour, Nous vous informons que de nouveaux documents sont disponibles dans votre espace de banque à distance pour FSECL ESPAGNE. - Extrait de compte - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de votre
+              - generic [ref=e381]:
+                - generic [ref=e382]: SAV / Support
+                - button [ref=e383]:
+                  - img [ref=e384]
+                - button [ref=e386]:
+                  - img [ref=e387]
+          - generic [ref=e391] [cursor=pointer]:
+            - generic [ref=e392]: O
+            - generic [ref=e393]:
+              - generic [ref=e394]:
+                - generic [ref=e395]: Masterlib - Masterlib
+                - generic [ref=e396]: 05 avr. 07:08
+              - generic [ref=e397]: Vos notifications vous attendent — Ne laissez rien passer !
+              - generic [ref=e398]: "Bonjour, Connectez-vous pour lire vos notifications : Projet MOE_Matthias Clement & Clelia Piaton 2 message(s) non lu(s) Ne perdez pas une minute, connectez-vous ici : Masterlib Astuce: consultez vos notifications rapidement pour éviter les r"
+              - generic [ref=e399]:
+                - generic [ref=e400]: SAV / Support
+                - button [ref=e401]:
+                  - img [ref=e402]
+                - button [ref=e404]:
+                  - img [ref=e405]
+          - generic [ref=e409] [cursor=pointer]:
+            - generic [ref=e410]: O
+            - generic [ref=e411]:
+              - generic [ref=e412]:
+                - generic [ref=e413]: Info Compte Express
+                - generic [ref=e414]: 05 avr. 06:55
+              - generic [ref=e415]: Nouveaux documents électroniques à votre disposition
+              - generic [ref=e416]: Bonjour, Nous vous informons que de nouveaux documents sont disponibles dans votre espace de banque à distance pour COSTANZA FINANCES. - Extrait de compte - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de vo
+              - generic [ref=e417]:
+                - button [ref=e418]:
+                  - img [ref=e419]
+                - button [ref=e421]:
+                  - img [ref=e422]
+          - generic [ref=e426] [cursor=pointer]:
+            - generic [ref=e427]: O
+            - generic [ref=e428]:
+              - generic [ref=e429]:
+                - generic [ref=e430]: Outlook
+                - generic [ref=e431]: 05 avr. 04:49
+              - generic [ref=e432]: "Synthèse quotidienne des réactions : dimanche 5 avril 2026"
+              - generic [ref=e433]: Microsoft Outlook Christophe Gay a réagi à votre message sam. 04/04/2026 10:35:00 Message Monsieur Breysse Salut Chris Cijoint un message de Monsieur Plutôt positif le type Bonjour Monsieur Costanza, Dans la suite de notre entretien, je vous
+              - generic [ref=e434]:
+                - button [ref=e435]:
+                  - img [ref=e436]
+                - button [ref=e438]:
+                  - img [ref=e439]
+          - generic [ref=e443] [cursor=pointer]:
+            - generic [ref=e444]: O
+            - generic [ref=e445]:
+              - generic [ref=e446]:
+                - generic [ref=e447]: so_send_journal_fond@sips-services.com
+                - generic [ref=e448]: 05 avr. 00:28
+              - generic [ref=e449]: liste des opérations effectuées
+              - generic [ref=e450]:
+                - generic [ref=e451]: SAV / Support
+                - button [ref=e452]:
+                  - img [ref=e453]
+                - button [ref=e455]:
+                  - img [ref=e456]
+          - generic [ref=e460] [cursor=pointer]:
+            - generic [ref=e461]: O
+            - generic [ref=e462]:
+              - generic [ref=e463]:
+                - generic [ref=e464]: so_send_journal_fond@sips-services.com
+                - generic [ref=e465]: 05 avr. 00:19
+              - generic [ref=e466]: liste des paiements traités
+              - generic [ref=e467]:
+                - generic [ref=e468]: SAV / Support
+                - button [ref=e469]:
+                  - img [ref=e470]
+                - button [ref=e472]:
+                  - img [ref=e473]
+          - generic [ref=e477] [cursor=pointer]:
+            - generic [ref=e478]: O
+            - generic [ref=e479]:
+              - generic [ref=e480]:
+                - generic [ref=e481]: Uber
+                - generic [ref=e482]: 04 avr. 23:53
+              - generic [ref=e483]: Vos démarches pour rejoindre la plateforme Uber
+              - generic [ref=e484]: Bonjour Fabrice, Afin de vous accompagner au mieux, nous vous proposons de sélectionner la situation qui vous correspond. J'aimerais discuter avec un conseiller Je suis inscrit à l'examen VTC J'hésite à m'inscrire à l'examen VTC
+              - generic [ref=e485]:
+                - generic [ref=e486]: Commercial / Propale
+                - button [ref=e487]:
+                  - img [ref=e488]
+                - button [ref=e490]:
+                  - img [ref=e491]
+          - generic [ref=e495] [cursor=pointer]:
+            - generic [ref=e496]: O
+            - generic [ref=e497]:
+              - generic [ref=e498]:
+                - generic [ref=e499]: Info Compte Express
+                - generic [ref=e500]: 04 avr. 23:43
+              - generic [ref=e501]: Nouveaux documents électroniques à votre disposition
+              - generic [ref=e502]: Bonjour, Nous vous informons qu'un nouveau document est disponible dans votre espace de banque à distance pour COSY. - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de votre site ou application mobile. Votr
+              - generic [ref=e503]:
+                - generic [ref=e504]: SAV / Support
+                - button [ref=e505]:
+                  - img [ref=e506]
+                - button [ref=e508]:
+                  - img [ref=e509]
+          - generic [ref=e513] [cursor=pointer]:
+            - generic [ref=e514]: O
+            - generic [ref=e515]:
+              - generic [ref=e516]:
+                - generic [ref=e517]: Emma | GetYourGuide
+                - generic [ref=e518]: 04 avr. 22:56
+              - generic [ref=e519]: 🌈 Ces 10 destinations aux coloris éblouissants ne sont pas le fruit de l’IA
+              - generic [ref=e520]: "Mais aussi : les plus belles îles d’Italie. ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌"
+              - generic [ref=e521]:
+                - generic [ref=e522]: Commercial / Propale
+                - button [ref=e523]:
+                  - img [ref=e524]
+                - button [ref=e526]:
+                  - img [ref=e527]
+          - generic [ref=e531] [cursor=pointer]:
+            - generic [ref=e532]: O
+            - generic [ref=e533]:
+              - generic [ref=e534]:
+                - generic [ref=e535]: Discord
+                - generic [ref=e536]: 04 avr. 22:56
+              - generic [ref=e537]: Tu as manqué des messages sur VISION IA
+              - generic [ref=e538]: "Tu as reçu 4 nouveaux messages #vérification (VISION IA) Voir les messages #accueil (VISION IA) Voir les messages Besoin d'aide ? Contacte notre équipe d'assistance ou envoie-nous un message sur X @discord. Tu souhaites nous faire part de"
+              - generic [ref=e539]:
+                - button [ref=e540]:
+                  - img [ref=e541]
+                - button [ref=e543]:
+                  - img [ref=e544]
+          - generic [ref=e548] [cursor=pointer]:
+            - generic [ref=e549]: O
+            - generic [ref=e550]:
+              - generic [ref=e551]:
+                - generic [ref=e552]: LinkedIn
+                - generic [ref=e553]: 04 avr. 21:58
+              - generic [ref=e554]: Fabrice, votre profil attire l’attention
+              - generic [ref=e555]: Vous avez été remarqué(e) par une personne travaillant chez LÉA COMPOSITES ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+              - generic [ref=e556]:
+                - button [ref=e557]:
+                  - img [ref=e558]
+                - button [ref=e560]:
+                  - img [ref=e561]
+          - generic [ref=e565] [cursor=pointer]:
+            - generic [ref=e566]: O
+            - generic [ref=e567]:
+              - generic [ref=e568]:
+                - generic [ref=e569]: LinkedIn
+                - generic [ref=e570]: 04 avr. 19:58
+              - generic [ref=e571]: "Maxime PATOU, Account Executive Enterprise - Ontario & Québec, a réagi à un post : C’est vendredi ! 🃏 10 ans…"
+              - generic [ref=e572]: C’est vendredi ! 🃏 10 ans… ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+              - generic [ref=e573]:
+                - button [ref=e574]:
+                  - img [ref=e575]
+                - button [ref=e577]:
+                  - img [ref=e578]
+          - generic [ref=e582] [cursor=pointer]:
+            - generic [ref=e583]: O
+            - generic [ref=e584]:
+              - generic [ref=e585]:
+                - generic [ref=e586]: LinkedIn
+                - generic [ref=e587]: 04 avr. 19:32
+              - generic [ref=e588]: Vous avez 1 nouvelle invitation
+              - generic [ref=e589]: Vous avez 1 nouvelle invitation ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+              - generic [ref=e590]:
+                - button [ref=e591]:
+                  - img [ref=e592]
+                - button [ref=e594]:
+                  - img [ref=e595]
+          - generic [ref=e599] [cursor=pointer]:
+            - generic [ref=e600]: G
+            - generic [ref=e601]:
+              - generic [ref=e602]:
+                - generic [ref=e603]: fc@decimal-ia.com
+                - generic [ref=e604]: 04 avr. 17:06
+              - generic [ref=e605]: nouveau client
+              - generic [ref=e606]: type client --- This email was sent automatically with n8n
+              - generic [ref=e607]:
+                - generic [ref=e608]: Commercial / Propale
+                - button [ref=e609]:
+                  - img [ref=e610]
+                - button [ref=e612]:
+                  - img [ref=e613]
+          - generic [ref=e617] [cursor=pointer]:
+            - generic [ref=e618]: G
+            - generic [ref=e619]:
+              - generic [ref=e620]:
+                - generic [ref=e621]: fc@decimal-ia.com
+                - generic [ref=e622]: 04 avr. 16:13
+              - generic [ref=e623]: nouveau client
+              - generic [ref=e624]: type client --- This email was sent automatically with n8n
+              - generic [ref=e625]:
+                - generic [ref=e626]: Commercial / Propale
+                - button [ref=e627]:
+                  - img [ref=e628]
+                - button [ref=e630]:
+                  - img [ref=e631]
+      - generic [ref=e634]:
+        - generic [ref=e635]:
+          - generic [ref=e636]:
+            - heading "problème piscine" [level=2] [ref=e637]
+            - paragraph [ref=e638]: testlitige@cosy-groupe.fr <testlitige@cosy-groupe.fr>
+          - generic [ref=e639]:
+            - button "Contexte IA" [ref=e640]:
+              - img [ref=e641]
+              - text: Contexte IA
+            - button [ref=e644]:
+              - img [ref=e645]
+        - generic [ref=e648]:
+          - generic [ref=e649]:
+            - generic [ref=e650]:
+              - generic [ref=e651]: testlitige@cosy-groupe.fr
+              - generic [ref=e652]: 05 avr. 2026 14:21
+            - generic [ref=e653]: "Bonjour, Je prends note de votre retour suite à votre intervention. Toutefois, la présence d’une fuite dans un ouvrage réceptionné en août 2024 engage votre responsabilité au titre des garanties légales, notamment la garantie de parfait achèvement. À ce stade, aucune origine précise de la fuite n’ayant été formellement identifiée, il ne peut m’être demandé de prendre à ma charge des travaux exploratoires, en particulier en l’absence de preuve que l’intervention d’un tiers serait à l’origine du désordre constaté. Je vous remercie donc de bien vouloir organiser les investigations nécessaires afin de localiser précisément la fuite et d’en déterminer l’origine. À défaut, je me verrai contraint de missionner un expert afin de constater le désordre et d’engager les démarches nécessaires. Dans l’attente de votre retour. Le 05.04.2026 12:18, Fabrice a écrit : > Bonjour, > > Suite à votre message, notre entretien téléphonique de ce matin et à > notre intervention du mardi 17 mars, nous souhaitons vous apporter les > précisions suivantes. > Lors de notre passage, nous avons réalisé l’ensemble des contrôles > nécessaires sur les éléments accessibles de votre installation : > skimmers, refoulements, brides et réseau hydraulique. > À ce jour, aucune fuite n’a été constatée sur ces postes, que ce soit > en étanchéité ou en hydraulique. > Comme évoqué ensemble lors de notre intervention puis confirmé lors de > notre échange téléphonique de ce matin, le point restant à vérifier > concerne les traversées de paroi au niveau des spots. > Or, cet accès a été condamné suite à l’intervention d’un tiers, ce qui > ne nous permet pas de réaliser les contrôles nécessaires. > Dans ces conditions, et comme convenu, il vous appartient de faire > intervenir le carreleur afin de déposer les éléments concernés et > rétablir l’accès, cette intervention étant à votre charge puisque la > zone a été rendue inaccessible après notre passage. > Concernant votre question sur la dépose et repose des carreaux, > celle-ci s’inscrit dans ce même cadre. > À ce stade, et au regard des tests effectués, aucune fuite n’a pu être > mise en évidence. > Nous restons bien entendu à votre disposition pour intervenir à nouveau > dès que l’accès sera rétabli, afin de finaliser les vérifications."
+          - generic [ref=e654]:
+            - generic [ref=e655]:
+              - generic [ref=e656]: Moi
+              - generic [ref=e657]: 05 avr. 2026 14:18
+            - paragraph [ref=e658]: "Bonjour, Suite à votre message, notre entretien téléphonique de ce matin et à notre intervention du mardi 17 mars, nous souhaitons vous apporter les précisions suivantes. Lors de notre passage, nous avons réalisé l’ensemble des contrôles nécessaires sur les éléments accessibles de votre installation : skimmers, refoulements, brides et réseau hydraulique. À ce jour, aucune fuite n’a été constatée sur ces postes, que ce soit en étanchéité ou en hydraulique. Comme évoqué ensemble lors de notre intervention puis confirmé lors de notre échange téléphonique de ce matin, le point restant à vérifier concerne les traversées de paroi au niveau des spots. Or, cet accès a été condamné suite à l’intervention d’un tiers, ce qui ne nous permet pas de réaliser les contrôles nécessaires. Dans ces conditions, et comme convenu, il vous appartient de faire intervenir le carreleur afin de déposer les éléments concernés et rétablir l’accès, cette intervention étant à votre charge puisque la zone a été rendue inaccessible après notre passage. Concernant votre question sur la dépose et repose des carreaux, celle-ci s’inscrit dans ce même cadre. À ce stade, et au regard des tests effectués, aucune fuite n’a pu être mise en évidence. Nous restons bien entendu à votre disposition pour intervenir à nouveau dès que l’accès sera rétabli, afin de finaliser les vérifications."
+          - generic [ref=e659]:
+            - generic [ref=e660]:
+              - generic [ref=e661]: testlitige@cosy-groupe.fr
+              - generic [ref=e662]: 05 avr. 2026 12:50
+            - generic [ref=e663]: "Le 05.04.2026 10:42, Fabrice a écrit : > Bonjour, > > Merci de nous avoir contactés et de nous avoir transmis ces > informations suite à notre échange téléphonique. > > Nous avons bien noté que vous avez effectué un test du sceau il y a > environ 2 heures, soit avant le délai des 24 heures recommandé. Vous > mentionnez une légère perte d'eau détectée depuis hier et nous avez > transmis des photos à cet effet. > > Nous prenons votre observation au sérieux. Afin d'analyser précisément > la situation, nous avons besoin de : > - Examiner attentivement les photographies que vous avez jointes > - Vérifier si la perte observée correspond aux conditions de test ou à > un défaut du sceau > - Vous conseiller sur les étapes à suivre > > Nous vous proposons de nous transmettre rapidement les images si ce > n'est pas fait, ou de convenir d'un rendez-vous pour inspecter le > produit directement. > > Nous nous engageons à vous apporter une réponse dans les 48 heures > suivant la réception des éléments complets. > > N'hésitez pas nous recontacter pour toute question ou précision > supplémentaire. > > Cordialement, > L'équipe Cosy Piscine & Spa Bonjour Rapport bien reçu ce jour. Quid de la prise en charge de la dépose et repose des carreaux ? Je n’ai pas eu de retour concernant le problème de dalle ? Merci Bonne journée à vous Envoyé de mon iPhone"
+          - generic [ref=e664]:
+            - generic [ref=e665]:
+              - generic [ref=e666]: testlitige@cosy-groupe.fr
+              - generic [ref=e667]: 05 avr. 2026 12:50
+            - paragraph [ref=e668]: Bonjour Rapport bien reçu ce jour. Quid de la prise en charge de la dépose et repose des carreaux ? Je n'ai pas eu de retour concernant le problème de dalle ? Merci Bonne journée à vous
+          - generic [ref=e669]:
+            - generic [ref=e670]:
+              - generic [ref=e671]: testlitige@cosy-groupe.fr
+              - generic [ref=e672]: 05 avr. 2026 12:43
+            - generic [ref=e673]: "Le 05.04.2026 10:42, Fabrice a écrit : > Bonjour, > > Merci de nous avoir contactés et de nous avoir transmis ces > informations suite à notre échange téléphonique. > > Nous avons bien noté que vous avez effectué un test du sceau il y a > environ 2 heures, soit avant le délai des 24 heures recommandé. Vous > mentionnez une légère perte d'eau détectée depuis hier et nous avez > transmis des photos à cet effet. > > Nous prenons votre observation au sérieux. Afin d'analyser précisément > la situation, nous avons besoin de : > - Examiner attentivement les photographies que vous avez jointes > - Vérifier si la perte observée correspond aux conditions de test ou à > un défaut du sceau > - Vous conseiller sur les étapes à suivre > > Nous vous proposons de nous transmettre rapidement les images si ce > n'est pas fait, ou de convenir d'un rendez-vous pour inspecter le > produit directement. > > Nous nous engageons à vous apporter une réponse dans les 48 heures > suivant la réception des éléments complets. > > N'hésitez pas nous recontacter pour toute question ou précision > supplémentaire. > > Cordialement, > L'équipe Cosy Piscine & Spa Bonjour Rapport bien reçu ce jour. Quid de la prise en charge de la dépose et repose des carreaux ? Je n’ai pas eu de retour concernant le problème de dalle ? Merci Bonne journée à vous Envoyé de mon iPhone"
+          - generic [ref=e674]:
+            - generic [ref=e675]:
+              - generic [ref=e676]: Moi
+              - generic [ref=e677]: 05 avr. 2026 12:42
+            - paragraph [ref=e678]: "Bonjour, Merci de nous avoir contactés et de nous avoir transmis ces informations suite à notre échange téléphonique. Nous avons bien noté que vous avez effectué un test du sceau il y a environ 2 heures, soit avant le délai des 24 heures recommandé. Vous mentionnez une légère perte d'eau détectée depuis hier et nous avez transmis des photos à cet effet. Nous prenons votre observation au sérieux. Afin d'analyser précisément la situation, nous avons besoin de : - Examiner attentivement les photographies que vous avez jointes - Vérifier si la perte observée correspond aux conditions de test ou à un défaut du sceau - Vous conseiller sur les étapes à suivre Nous vous proposons de nous transmettre rapidement les images si ce n'est pas fait, ou de convenir d'un rendez-vous pour inspecter le produit directement. Nous nous engageons à vous apporter une réponse dans les 48 heures suivant la réception des éléments complets. N'hésitez pas nous recontacter pour toute question ou précision supplémentaire. Cordialement, L'équipe Cosy Piscine & Spa"
+          - generic [ref=e679]:
+            - generic [ref=e680]:
+              - generic [ref=e681]: Moi
+              - generic [ref=e682]: 05 avr. 2026 12:29
+            - paragraph [ref=e711]: test
+          - generic [ref=e685]:
+            - generic [ref=e686]:
+              - generic [ref=e687]: testlitige@cosy-groupe.fr
+              - generic [ref=e688]: 05 avr. 2026 12:28
+            - paragraph [ref=e689]: Bonjour Suite notre appel j'ai fait test du sceau Je suis 2h du avant les 24 h et ça attaque de pleuvoir. J’ai l’impression qu’on peut constater une légère perte depuis hier je vous laisse apprécier les photos et me revenir.
+        - generic [ref=e690]:
+          - generic [ref=e692]:
+            - img [ref=e693]
+            - text: Assistant IA
+          - generic [ref=e697]:
+            - combobox [ref=e698]:
+              - option "Haiku (rapide)"
+              - option "Sonnet (recommandé)" [selected]
+              - option "Opus (complexe)"
+            - 'textbox "Instructions (ex: proposer intervention mardi, tutoyer...)" [ref=e699]'
+            - button "Générer" [ref=e700]:
+              - img [ref=e712]
+              - text: Générer
+        - button "Répondre sans IA" [ref=e707]:
+          - img [ref=e708]
+          - text: Répondre sans IA
