@@ -1,4 +1,4 @@
-export type Channel = 'gmail' | 'outlook' | 'sms'
+export type Channel = 'gmail' | 'outlook' | 'facebook' | 'sms'
 
 export interface InboxAccount {
   id: string
@@ -20,6 +20,8 @@ export interface InboxCategory {
   color: string           // hex color
   icon: string            // lucide icon name
   sort_order: number
+  autoreply_enabled: boolean
+  autoreply_prompt: string
   created_at: string
 }
 
@@ -27,7 +29,7 @@ export interface RoutingRule {
   id: string
   org_id: string
   category_id: string
-  match_type: 'domain' | 'email' | 'contains'
+  match_type: 'domain' | 'email' | 'contains' | 'from' | 'subject' | 'autoreply'
   match_value: string     // ex: "cosy-groupe.com", "client@example.com"
   priority: number
   created_at: string
@@ -48,6 +50,7 @@ export interface InboxThread {
   is_archived: boolean
   message_count: number
   last_message_at: string
+  draft_reply: string | null
   external_id: string     // Gmail/Outlook thread ID
   created_at: string
   updated_at: string

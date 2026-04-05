@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
 import type { InboxCategory, RoutingRule } from '@/types'
-import { Tag, Plus, Trash2, Save, Route } from 'lucide-react'
+import { Tag, Plus, Trash2, Save, Route, Bot } from 'lucide-react'
 
 const defaultColors = ['#2563eb', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316']
 
@@ -34,6 +34,8 @@ export default function Categories() {
         name: editCat.name,
         color: editCat.color,
         icon: editCat.icon,
+        autoreply_enabled: editCat.autoreply_enabled ?? false,
+        autoreply_prompt: editCat.autoreply_prompt ?? '',
       }).eq('id', editCat.id)
     } else {
       await supabase.from('inbox_categories').insert({
@@ -42,6 +44,8 @@ export default function Categories() {
         icon: editCat.icon || 'tag',
         sort_order: categories.length,
         org_id: 'default',
+        autoreply_enabled: editCat.autoreply_enabled ?? false,
+        autoreply_prompt: editCat.autoreply_prompt ?? '',
       })
     }
     setEditCat(null)
@@ -98,7 +102,7 @@ export default function Categories() {
             Catégories
           </h2>
           <button
-            onClick={() => setEditCat({ name: '', color: '#2563eb', icon: 'tag' })}
+            onClick={() => setEditCat({ name: '', color: '#2563eb', icon: 'tag', autoreply_enabled: false, autoreply_prompt: '' })}
             className="flex items-center gap-1 px-3 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-primary-hover transition-colors"
           >
             <Plus size={14} />
@@ -112,6 +116,12 @@ export default function Categories() {
               <div className="flex items-center gap-3">
                 <div className="w-4 h-4 rounded-full" style={{ backgroundColor: cat.color }} />
                 <span className="text-sm font-medium">{cat.name}</span>
+                {cat.autoreply_enabled && (
+                  <span className="flex items-center gap-1 text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">
+                    <Bot size={10} />
+                    Auto-reply
+                  </span>
+                )}
               </div>
               <div className="flex items-center gap-2">
                 <button
@@ -152,6 +162,31 @@ export default function Categories() {
                 />
               ))}
             </div>
+
+            {/* Auto-reply section */}
+            <div className="border-t border-border pt-3">
+              <label className="flex items-center gap-2 cursor-pointer mb-2">
+                <input
+                  type="checkbox"
+                  checked={editCat.autoreply_enabled ?? false}
+                  onChange={e => setEditCat({ ...editCat, autoreply_enabled: e.target.checked })}
+                  className="rounded border-border"
+                />
+                <Bot size={14} className="text-purple-600" />
+                <span className="text-sm font-medium">Activer la suggestion de réponse IA</span>
+              </label>
+
+              {editCat.autoreply_enabled && (
+                <textarea
+                  value={editCat.autoreply_prompt || ''}
+                  onChange={e => setEditCat({ ...editCat, autoreply_prompt: e.target.value })}
+                  placeholder={"Instructions pour l'IA. Exemples :\n- Ton amical et professionnel\n- Mentionner nos tarifs sur decimal.fr/pricing\n- Proposer un RDV via calendly.com/decimal\n- Signer \"Fabrice, Équipe Decimal\""}
+                  rows={5}
+                  className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
+                />
+              )}
+            </div>
+
             <div className="flex gap-2">
               <button onClick={() => setEditCat(null)} className="text-sm text-text-muted">Annuler</button>
               <button
@@ -190,7 +225,7 @@ export default function Categories() {
                 <div className="flex items-center gap-3">
                   <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{rule.match_type}</span>
                   <span className="text-sm font-mono">{rule.match_value}</span>
-                  <span className="text-text-muted text-xs">→</span>
+                  <span className="text-text-muted text-xs">&rarr;</span>
                   {cat && (
                     <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: cat.color + '20', color: cat.color }}>
                       {cat.name}
@@ -205,7 +240,7 @@ export default function Categories() {
           })}
           {rules.length === 0 && (
             <p className="p-4 text-sm text-text-muted text-center">
-              Aucune règle — les messages seront classés manuellement
+              Aucune règle — les messages non routés seront classés par l'IA automatiquement
             </p>
           )}
         </div>
@@ -220,14 +255,15 @@ export default function Categories() {
                 className="text-sm border border-border rounded-lg px-3 py-2"
               >
                 <option value="domain">Domaine</option>
-                <option value="email">Email exact</option>
+                <option value="from">Expéditeur</option>
+                <option value="subject">Sujet contient</option>
                 <option value="contains">Contient</option>
               </select>
               <input
                 type="text"
                 value={editRule.match_value || ''}
                 onChange={e => setEditRule({ ...editRule, match_value: e.target.value })}
-                placeholder={editRule.match_type === 'domain' ? 'cosy-groupe.com' : 'client@example.com'}
+                placeholder={editRule.match_type === 'domain' ? 'cosy-groupe.com' : editRule.match_type === 'subject' ? 'facture' : 'client@example.com'}
                 className="flex-1 px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/30"
                 autoFocus
               />
@@ -253,6 +289,17 @@ export default function Categories() {
             </div>
           </div>
         )}
+      </div>
+
+      {/* Info IA */}
+      <div className="mt-8 bg-purple-50 rounded-xl p-4 text-sm text-purple-800">
+        <p className="font-medium mb-1 flex items-center gap-1"><Bot size={14} /> Routage intelligent</p>
+        <ul className="list-disc ml-4 space-y-1 text-xs">
+          <li>Les règles manuelles sont appliquées en priorité</li>
+          <li>Les messages sans règle sont classés automatiquement par l'IA (Claude)</li>
+          <li>Activez "Suggestion de réponse IA" sur une catégorie pour recevoir des brouillons de réponse</li>
+          <li>Les brouillons ne sont jamais envoyés sans votre validation</li>
+        </ul>
       </div>
     </div>
   )
