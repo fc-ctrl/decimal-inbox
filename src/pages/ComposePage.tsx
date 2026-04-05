@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
-import type { InboxAccount, InboxCategory } from '@/types'
+import type { InboxAccount } from '@/types'
 import { Send, Bot, Loader2, PenTool } from 'lucide-react'
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://plbjafwltwpupspmlnip.supabase.co'
@@ -8,7 +8,6 @@ const COMPOSE_URL = `${SUPABASE_URL}/functions/v1/inbox-compose`
 
 export default function ComposePage() {
   const [accounts, setAccounts] = useState<InboxAccount[]>([])
-  const [categories, setCategories] = useState<InboxCategory[]>([])
   const [accountId, setAccountId] = useState('')
   const [to, setTo] = useState('')
   const [subject, setSubject] = useState('')
@@ -23,12 +22,8 @@ export default function ComposePage() {
 
   useEffect(() => {
     async function load() {
-      const [{ data: accs }, { data: cats }] = await Promise.all([
-        supabase.from('inbox_accounts').select('*').eq('is_active', true).order('created_at'),
-        supabase.from('inbox_categories').select('*').order('sort_order'),
-      ])
+      const { data: accs } = await supabase.from('inbox_accounts').select('*').eq('is_active', true).order('created_at')
       setAccounts(accs || [])
-      setCategories(cats || [])
       if (accs && accs.length > 0) setAccountId(accs[0].id)
     }
     load()
