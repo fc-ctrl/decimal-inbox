@@ -31,6 +31,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   const [instructions, setInstructions] = useState('')
   const [generatingDraft, setGeneratingDraft] = useState(false)
   const [editMode, setEditMode] = useState(false)
+  const [selectedModel, setSelectedModel] = useState<string>('sonnet')
 
   useEffect(() => {
     loadMessages()
@@ -73,7 +74,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       const res = await fetch(REFINE_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ thread_id: thread.id, action: 'generate', instructions: instructions || undefined }),
+        body: JSON.stringify({ thread_id: thread.id, action: 'generate', instructions: instructions || undefined, model: selectedModel }),
       })
       const data = await res.json()
       if (data.draft) {
@@ -278,13 +279,22 @@ export default function ThreadDetail({ thread, onClose }: Props) {
 
           {/* Instructions for AI */}
           {!editMode && (
-            <div className="mb-3">
+            <div className="mb-3 space-y-2">
               <div className="flex gap-2">
+                <select
+                  value={selectedModel}
+                  onChange={e => setSelectedModel(e.target.value)}
+                  className="text-xs border border-purple-200 rounded-lg px-2 py-1.5 bg-white"
+                >
+                  <option value="haiku">Haiku (rapide)</option>
+                  <option value="sonnet">Sonnet (recommandé)</option>
+                  <option value="opus">Opus (complexe)</option>
+                </select>
                 <input
                   type="text"
                   value={instructions}
                   onChange={e => setInstructions(e.target.value)}
-                  placeholder="Instructions pour l'IA (ex: proposer intervention mardi, mentionner garantie...)"
+                  placeholder="Instructions (ex: proposer intervention mardi, tutoyer...)"
                   className="flex-1 px-3 py-1.5 text-sm rounded-lg border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300"
                   onKeyDown={e => e.key === 'Enter' && generateDraft()}
                 />

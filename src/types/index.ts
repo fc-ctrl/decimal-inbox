@@ -22,6 +22,7 @@ export interface InboxCategory {
   sort_order: number
   autoreply_enabled: boolean
   autoreply_prompt: string
+  default_model: 'haiku' | 'sonnet' | 'opus'
   created_at: string
 }
 

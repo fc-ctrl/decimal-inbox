@@ -36,6 +36,7 @@ export default function Categories() {
         icon: editCat.icon,
         autoreply_enabled: editCat.autoreply_enabled ?? false,
         autoreply_prompt: editCat.autoreply_prompt ?? '',
+        default_model: editCat.default_model ?? 'sonnet',
       }).eq('id', editCat.id)
     } else {
       await supabase.from('inbox_categories').insert({
@@ -46,6 +47,7 @@ export default function Categories() {
         org_id: 'default',
         autoreply_enabled: editCat.autoreply_enabled ?? false,
         autoreply_prompt: editCat.autoreply_prompt ?? '',
+        default_model: editCat.default_model ?? 'sonnet',
       })
     }
     setEditCat(null)
@@ -102,7 +104,7 @@ export default function Categories() {
             Catégories
           </h2>
           <button
-            onClick={() => setEditCat({ name: '', color: '#2563eb', icon: 'tag', autoreply_enabled: false, autoreply_prompt: '' })}
+            onClick={() => setEditCat({ name: '', color: '#2563eb', icon: 'tag', autoreply_enabled: false, autoreply_prompt: '', default_model: 'sonnet' })}
             className="flex items-center gap-1 px-3 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-primary-hover transition-colors"
           >
             <Plus size={14} />
@@ -175,6 +177,20 @@ export default function Categories() {
                 <Bot size={14} className="text-purple-600" />
                 <span className="text-sm font-medium">Activer la suggestion de réponse IA</span>
               </label>
+
+              {/* Model selector */}
+              <div className="mt-2">
+                <label className="text-xs text-text-muted mb-1 block">Modèle IA par défaut</label>
+                <select
+                  value={editCat.default_model ?? 'sonnet'}
+                  onChange={e => setEditCat({ ...editCat, default_model: e.target.value as 'haiku' | 'sonnet' | 'opus' })}
+                  className="text-sm border border-border rounded-lg px-3 py-2"
+                >
+                  <option value="haiku">Haiku — rapide, orthographe, mails simples</option>
+                  <option value="sonnet">Sonnet — recommandé, bon pour la plupart des mails</option>
+                  <option value="opus">Opus — complexe, litiges, négociations</option>
+                </select>
+              </div>
 
               {editCat.autoreply_enabled && (
                 <textarea

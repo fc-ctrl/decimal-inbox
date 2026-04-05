@@ -18,6 +18,7 @@ interface UploadedFile {
 export default function ComposePage() {
   const [accounts, setAccounts] = useState<InboxAccount[]>([])
   const [accountId, setAccountId] = useState('')
+  const [selectedModel, setSelectedModel] = useState('sonnet')
   const [to, setTo] = useState('')
   const [subject, setSubject] = useState('')
   const [notes, setNotes] = useState('')
@@ -81,7 +82,7 @@ export default function ComposePage() {
       const res = await fetch(COMPOSE_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'generate', to, subject, notes }),
+        body: JSON.stringify({ action: 'generate', to, subject, notes, model: selectedModel }),
       })
       const data = await res.json()
       if (data.subject) setSubject(data.subject)
@@ -149,20 +150,34 @@ export default function ComposePage() {
       )}
 
       <div className="space-y-4">
-        {/* Compte d'envoi */}
-        <div>
-          <label className="text-xs text-text-muted mb-1 block">Envoyer depuis</label>
-          <select
-            value={accountId}
-            onChange={e => setAccountId(e.target.value)}
-            className="w-full text-sm border border-border rounded-lg px-3 py-2"
-          >
-            {accounts.map(a => (
-              <option key={a.id} value={a.id}>
-                {a.label} ({a.email})
-              </option>
-            ))}
-          </select>
+        {/* Compte d'envoi + Modèle */}
+        <div className="flex gap-3">
+          <div className="flex-1">
+            <label className="text-xs text-text-muted mb-1 block">Envoyer depuis</label>
+            <select
+              value={accountId}
+              onChange={e => setAccountId(e.target.value)}
+              className="w-full text-sm border border-border rounded-lg px-3 py-2"
+            >
+              {accounts.map(a => (
+                <option key={a.id} value={a.id}>
+                  {a.label} ({a.email})
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="text-xs text-text-muted mb-1 block">Modèle IA</label>
+            <select
+              value={selectedModel}
+              onChange={e => setSelectedModel(e.target.value)}
+              className="w-full text-sm border border-border rounded-lg px-3 py-2"
+            >
+              <option value="haiku">Haiku (rapide)</option>
+              <option value="sonnet">Sonnet (recommandé)</option>
+              <option value="opus">Opus (complexe)</option>
+            </select>
+          </div>
         </div>
 
         {/* Destinataire */}
