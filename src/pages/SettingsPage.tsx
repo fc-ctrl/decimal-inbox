@@ -9,7 +9,7 @@ const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://plbjafwltwpup
 const GMAIL_OAUTH_URL = `${SUPABASE_URL}/functions/v1/gmail-oauth`
 const OUTLOOK_OAUTH_URL = `${SUPABASE_URL}/functions/v1/outlook-oauth`
 const FACEBOOK_OAUTH_URL = `${SUPABASE_URL}/functions/v1/facebook-oauth`
-const GMAIL_SYNC_URL = `${SUPABASE_URL}/functions/v1/gmail-sync`
+const SYNC_URL = `${SUPABASE_URL}/functions/v1/inbox-sync`
 
 const channelColors: Record<string, string> = {
   gmail: 'bg-red-100 text-red-700',
@@ -72,10 +72,11 @@ export default function SettingsPage() {
     setSyncing(true)
     setSyncResult(null)
     try {
-      const res = await fetch(GMAIL_SYNC_URL, { method: 'POST' })
+      const res = await fetch(SYNC_URL, { method: 'POST' })
       const data = await res.json()
       const total = data.results?.reduce((s: number, r: { synced?: number }) => s + (r.synced || 0), 0) || 0
-      setSyncResult(`${total} nouveau(x) message(s) synchronisé(s)`)
+      const channels = data.results?.map((r: { channel?: string; synced?: number }) => `${r.channel}: ${r.synced || 0}`).join(', ') || ''
+      setSyncResult(`${total} nouveau(x) message(s) synchronisé(s) (${channels})`)
     } catch (e) {
       setSyncResult(`Erreur: ${e}`)
     }
