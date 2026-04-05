@@ -236,7 +236,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       )}
 
       {/* Messages */}
-      <div className="flex-1 overflow-auto p-4 space-y-4">
+      <div className="min-h-0 flex-1 overflow-auto p-4 space-y-4">
         {loading ? (
           <div className="flex items-center justify-center py-8">
             <div className="animate-spin w-6 h-6 border-3 border-primary border-t-transparent rounded-full" />
@@ -410,7 +410,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       )}
 
       {/* Manual Reply (without AI) */}
-      <div className="border-t border-border p-4">
+      <div className="border-t border-border p-4 shrink-0">
         {showReply ? (
           <div className="space-y-3">
             <textarea
