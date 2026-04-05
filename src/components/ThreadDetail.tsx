@@ -196,7 +196,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   }
 
   return (
-    <div className="flex-1 flex flex-col bg-white">
+    <div className="flex-1 flex flex-col bg-white h-screen overflow-hidden">
       {/* Header */}
       <div className="p-4 border-b border-border flex items-center justify-between">
         <div className="min-w-0">
@@ -291,7 +291,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
 
       {/* AI Draft Reply */}
       {(draftReply || !showReply) && messages.length > 0 && (
-        <div className="border-t border-border p-4 bg-purple-50">
+        <div className="border-t border-border p-4 bg-purple-50 max-h-[40vh] overflow-y-auto shrink-0">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-1 text-xs text-purple-700 font-medium">
               <Bot size={12} />
