@@ -91,7 +91,7 @@ export default function InboxPage() {
   }
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       {/* Thread list */}
       <div className={`${selectedThread ? 'w-96' : 'flex-1'} border-r border-border flex flex-col bg-white`}>
         {/* Header */}

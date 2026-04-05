@@ -12,7 +12,7 @@ export default function Layout() {
   }
 
   return (
-    <div className="min-h-screen flex">
+    <div className="h-screen flex overflow-hidden">
       {/* Sidebar */}
       <aside className="w-64 bg-white border-r border-border flex flex-col">
         <div className="p-4 border-b border-border">
@@ -22,7 +22,7 @@ export default function Layout() {
               <span className="text-primary">Decimal</span>{' '}
               <span className="font-light text-text-secondary">Inbox</span>
             </span>
-            <span className="text-[10px] text-text-muted bg-gray-100 px-1.5 py-0.5 rounded-full">v0.5.2</span>
+            <span className="text-[10px] text-text-muted bg-gray-100 px-1.5 py-0.5 rounded-full">v0.5.3</span>
           </div>
         </div>
 
@@ -97,7 +97,7 @@ export default function Layout() {
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 overflow-hidden">
         <Outlet />
       </main>
     </div>

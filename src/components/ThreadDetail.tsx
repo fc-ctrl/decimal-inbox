@@ -198,7 +198,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   }
 
   return (
-    <div className="flex-1 flex flex-col bg-white max-h-screen overflow-hidden">
+    <div className="flex-1 flex flex-col bg-white h-full overflow-hidden">
       {/* Header */}
       <div className="p-4 border-b border-border flex items-center justify-between">
         <div className="min-w-0">
