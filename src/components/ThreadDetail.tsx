@@ -42,7 +42,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       .from('inbox_messages')
       .select('*')
       .eq('thread_id', thread.id)
-      .order('sent_at', { ascending: true })
+      .order('sent_at', { ascending: false })
     setMessages(data || [])
     setLoading(false)
     setDraftReply(thread.draft_reply || '')
