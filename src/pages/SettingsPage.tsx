@@ -3,16 +3,26 @@ import { useSearchParams } from 'react-router-dom'
 import { supabase } from '@/lib/supabase'
 import { useAuth } from '@/lib/AuthContext'
 import type { InboxAccount } from '@/types'
-import { Settings, Trash2, Mail, CheckCircle, XCircle, RefreshCw } from 'lucide-react'
+import { Settings, Trash2, Mail, CheckCircle, XCircle, RefreshCw, MessageSquare } from 'lucide-react'
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://plbjafwltwpupspmlnip.supabase.co'
 const GMAIL_OAUTH_URL = `${SUPABASE_URL}/functions/v1/gmail-oauth`
+const OUTLOOK_OAUTH_URL = `${SUPABASE_URL}/functions/v1/outlook-oauth`
+const FACEBOOK_OAUTH_URL = `${SUPABASE_URL}/functions/v1/facebook-oauth`
 const GMAIL_SYNC_URL = `${SUPABASE_URL}/functions/v1/gmail-sync`
 
 const channelColors: Record<string, string> = {
   gmail: 'bg-red-100 text-red-700',
   outlook: 'bg-blue-100 text-blue-700',
+  facebook: 'bg-indigo-100 text-indigo-700',
   sms: 'bg-green-100 text-green-700',
+}
+
+const channelIcons: Record<string, string> = {
+  gmail: 'G',
+  outlook: 'O',
+  facebook: 'F',
+  sms: 'S',
 }
 
 export default function SettingsPage() {
@@ -28,7 +38,6 @@ export default function SettingsPage() {
 
   useEffect(() => {
     loadAccounts()
-    // Clear URL params after showing
     if (successParam || errorParam) {
       setTimeout(() => setSearchParams({}, { replace: true }), 5000)
     }
@@ -44,6 +53,18 @@ export default function SettingsPage() {
   function connectGmail() {
     if (!profile?.id) return
     const url = `${GMAIL_OAUTH_URL}?action=authorize&user_id=${profile.id}&label=Gmail`
+    window.location.href = url
+  }
+
+  function connectOutlook() {
+    if (!profile?.id) return
+    const url = `${OUTLOOK_OAUTH_URL}?action=authorize&user_id=${profile.id}&label=Outlook`
+    window.location.href = url
+  }
+
+  function connectFacebook() {
+    if (!profile?.id) return
+    const url = `${FACEBOOK_OAUTH_URL}?action=authorize&user_id=${profile.id}&label=Facebook`
     window.location.href = url
   }
 
@@ -91,7 +112,9 @@ export default function SettingsPage() {
       {/* Success/Error notifications */}
       {successParam && (
         <div className="mb-4 bg-green-50 border border-green-200 text-green-800 rounded-xl p-3 text-sm">
-          Compte Gmail connecté avec succès !
+          {successParam === 'gmail' && 'Compte Gmail connecté avec succès !'}
+          {successParam === 'outlook' && 'Compte Outlook connecté avec succès !'}
+          {successParam === 'facebook' && 'Page Facebook connectée avec succès !'}
         </div>
       )}
       {errorParam && (
@@ -104,25 +127,16 @@ export default function SettingsPage() {
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-base font-medium">Comptes connectés</h2>
-          <div className="flex gap-2">
-            {accounts.some(a => a.channel === 'gmail') && (
-              <button
-                onClick={syncNow}
-                disabled={syncing}
-                className="flex items-center gap-1 px-3 py-1.5 border border-border rounded-lg text-sm text-text-secondary hover:bg-gray-50 disabled:opacity-50 transition-colors"
-              >
-                <RefreshCw size={14} className={syncing ? 'animate-spin' : ''} />
-                {syncing ? 'Sync...' : 'Synchroniser'}
-              </button>
-            )}
+          {accounts.length > 0 && (
             <button
-              onClick={connectGmail}
-              className="flex items-center gap-1 px-3 py-1.5 bg-red-600 text-white rounded-lg text-sm hover:bg-red-700 transition-colors"
+              onClick={syncNow}
+              disabled={syncing}
+              className="flex items-center gap-1 px-3 py-1.5 border border-border rounded-lg text-sm text-text-secondary hover:bg-gray-50 disabled:opacity-50 transition-colors"
             >
-              <Mail size={14} />
-              Connecter Gmail
+              <RefreshCw size={14} className={syncing ? 'animate-spin' : ''} />
+              {syncing ? 'Sync...' : 'Synchroniser'}
             </button>
-          </div>
+          )}
         </div>
 
         {syncResult && (
@@ -136,7 +150,7 @@ export default function SettingsPage() {
             <div key={account.id} className="flex items-center justify-between p-4">
               <div className="flex items-center gap-3">
                 <span className={`text-xs font-bold px-2 py-1 rounded ${channelColors[account.channel] || 'bg-gray-100 text-gray-600'}`}>
-                  {account.channel === 'gmail' ? 'G' : account.channel === 'outlook' ? 'O' : 'S'}
+                  {channelIcons[account.channel] || '?'}
                 </span>
                 <div>
                   <div className="text-sm font-medium">{account.label}</div>
@@ -159,9 +173,46 @@ export default function SettingsPage() {
           ))}
           {accounts.length === 0 && (
             <div className="p-6 text-center text-text-muted text-sm">
-              Aucun compte connecté. Cliquez sur "Connecter Gmail" pour commencer.
+              Aucun compte connecté. Ajoutez un canal ci-dessous.
             </div>
           )}
+        </div>
+      </div>
+
+      {/* Ajouter un canal */}
+      <div className="mb-8">
+        <h2 className="text-base font-medium mb-4">Ajouter un canal</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <button
+            onClick={connectGmail}
+            className="flex items-center gap-2 px-4 py-3 bg-white border border-border rounded-xl text-sm hover:border-red-300 hover:bg-red-50 transition-colors"
+          >
+            <Mail size={18} className="text-red-600" />
+            <div className="text-left">
+              <div className="font-medium">Gmail</div>
+              <div className="text-xs text-text-muted">Google Workspace</div>
+            </div>
+          </button>
+          <button
+            onClick={connectOutlook}
+            className="flex items-center gap-2 px-4 py-3 bg-white border border-border rounded-xl text-sm hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <Mail size={18} className="text-blue-600" />
+            <div className="text-left">
+              <div className="font-medium">Outlook</div>
+              <div className="text-xs text-text-muted">Microsoft 365</div>
+            </div>
+          </button>
+          <button
+            onClick={connectFacebook}
+            className="flex items-center gap-2 px-4 py-3 bg-white border border-border rounded-xl text-sm hover:border-indigo-300 hover:bg-indigo-50 transition-colors"
+          >
+            <MessageSquare size={18} className="text-indigo-600" />
+            <div className="text-left">
+              <div className="font-medium">Facebook</div>
+              <div className="text-xs text-text-muted">Messenger Pages</div>
+            </div>
+          </button>
         </div>
       </div>
 
@@ -169,9 +220,9 @@ export default function SettingsPage() {
       <div className="bg-blue-50 rounded-xl p-4 text-sm text-blue-800">
         <p className="font-medium mb-1">Comment ça marche ?</p>
         <ul className="list-disc ml-4 space-y-1 text-xs">
-          <li>Connectez vos comptes Gmail via OAuth2 (sécurisé)</li>
-          <li>Configurez des catégories et règles de routage</li>
-          <li>Cliquez sur "Synchroniser" ou les mails arrivent automatiquement</li>
+          <li>Connectez vos comptes en un clic via OAuth2 (sécurisé)</li>
+          <li>Les messages sont synchronisés automatiquement toutes les 2 minutes</li>
+          <li>Configurez des catégories et règles de routage intelligent</li>
           <li>Répondez directement depuis Decimal Inbox</li>
         </ul>
       </div>
