@@ -262,7 +262,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       </div>
 
       {/* AI Draft Reply */}
-      {(draftReply || !showReply) && messages.length > 0 && messages[messages.length - 1]?.direction === 'inbound' && (
+      {(draftReply || !showReply) && messages.length > 0 && (
         <div className="border-t border-border p-4 bg-purple-50">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-1 text-xs text-purple-700 font-medium">
