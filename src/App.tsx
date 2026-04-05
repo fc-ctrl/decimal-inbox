@@ -5,6 +5,7 @@ import Login from '@/pages/Login'
 import InboxPage from '@/pages/InboxPage'
 import Categories from '@/pages/Categories'
 import SettingsPage from '@/pages/SettingsPage'
+import ComposePage from '@/pages/ComposePage'
 
 function RequireAuth({ children }: { children: React.ReactNode }) {
   const { session, loading } = useAuth()
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route element={<RequireAuth><Layout /></RequireAuth>}>
             <Route path="/" element={<InboxPage />} />
+            <Route path="/compose" element={<ComposePage />} />
             <Route path="/categories" element={<Categories />} />
             <Route path="/settings" element={<SettingsPage />} />
           </Route>

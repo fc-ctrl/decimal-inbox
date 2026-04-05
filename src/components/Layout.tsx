@@ -1,6 +1,6 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '@/lib/AuthContext'
-import { Inbox, Settings, LogOut, Mail, Tag } from 'lucide-react'
+import { Inbox, Settings, LogOut, Mail, Tag, PenTool } from 'lucide-react'
 
 export default function Layout() {
   const { profile, signOut } = useAuth()
@@ -40,6 +40,19 @@ export default function Layout() {
           >
             <Mail size={18} />
             Inbox
+          </NavLink>
+          <NavLink
+            to="/compose"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                isActive
+                  ? 'bg-primary-light text-primary font-medium'
+                  : 'text-text-secondary hover:bg-gray-50'
+              }`
+            }
+          >
+            <PenTool size={18} />
+            Composer
           </NavLink>
           <NavLink
             to="/categories"
