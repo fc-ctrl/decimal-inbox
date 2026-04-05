@@ -35,6 +35,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   const [replyAttachments, setReplyAttachments] = useState<{filename: string, url: string, path: string, size: number, mimeType: string}[]>([])
   const [uploadingAtt, setUploadingAtt] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const draftRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     loadMessages()
@@ -84,6 +85,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
         setDraftReply(data.draft)
         setInstructions('')
         setEditMode(false)
+        setTimeout(() => draftRef.current?.scrollIntoView({ behavior: 'smooth' }), 100)
       }
     } catch (e) {
       alert(`Erreur: ${e}`)
@@ -196,7 +198,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   }
 
   return (
-    <div className="flex-1 flex flex-col bg-white h-screen overflow-hidden">
+    <div className="flex-1 flex flex-col bg-white max-h-screen overflow-hidden">
       {/* Header */}
       <div className="p-4 border-b border-border flex items-center justify-between">
         <div className="min-w-0">
@@ -291,7 +293,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
 
       {/* AI Draft Reply */}
       {(draftReply || !showReply) && messages.length > 0 && (
-        <div className="border-t border-border p-4 bg-purple-50 max-h-[40vh] overflow-y-auto shrink-0">
+        <div ref={draftRef} className="border-t border-border p-4 bg-purple-50 max-h-[50vh] overflow-y-auto shrink-0">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-1 text-xs text-purple-700 font-medium">
               <Bot size={12} />
