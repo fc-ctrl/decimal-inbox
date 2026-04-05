@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
 import type { InboxThread, InboxMessage } from '@/types'
-import { X, Send, Reply, Download, Bot, Loader2 } from 'lucide-react'
+import { X, Send, Reply, Download, Bot, Loader2, PenLine, RefreshCw } from 'lucide-react'
+import { format } from 'date-fns'
+import { fr } from 'date-fns/locale'
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://plbjafwltwpupspmlnip.supabase.co'
 const ATTACHMENT_URL = `${SUPABASE_URL}/functions/v1/inbox-attachment`
 const SEND_REPLY_URL = `${SUPABASE_URL}/functions/v1/inbox-send-reply`
-import { format } from 'date-fns'
-import { fr } from 'date-fns/locale'
+const REFINE_URL = `${SUPABASE_URL}/functions/v1/inbox-refine`
 
 interface Props {
   thread: InboxThread
@@ -21,8 +22,15 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   const [sending, setSending] = useState(false)
   const [showReply, setShowReply] = useState(false)
   const [downloadingAtt, setDownloadingAtt] = useState<string | null>(null)
+
+  // AI assistant state
+  const [summary, setSummary] = useState<string | null>(null)
+  const [loadingSummary, setLoadingSummary] = useState(false)
   const [draftReply, setDraftReply] = useState(thread.draft_reply || '')
   const [sendingDraft, setSendingDraft] = useState(false)
+  const [instructions, setInstructions] = useState('')
+  const [generatingDraft, setGeneratingDraft] = useState(false)
+  const [editMode, setEditMode] = useState(false)
 
   useEffect(() => {
     loadMessages()
@@ -38,6 +46,45 @@ export default function ThreadDetail({ thread, onClose }: Props) {
     setMessages(data || [])
     setLoading(false)
     setDraftReply(thread.draft_reply || '')
+    setSummary(null)
+    setEditMode(false)
+    setInstructions('')
+  }
+
+  async function loadSummary() {
+    setLoadingSummary(true)
+    try {
+      const res = await fetch(REFINE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ thread_id: thread.id, action: 'summary' }),
+      })
+      const data = await res.json()
+      setSummary(data.summary || 'Aucun contexte disponible.')
+    } catch (e) {
+      setSummary(`Erreur: ${e}`)
+    }
+    setLoadingSummary(false)
+  }
+
+  async function generateDraft() {
+    setGeneratingDraft(true)
+    try {
+      const res = await fetch(REFINE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ thread_id: thread.id, action: 'generate', instructions: instructions || undefined }),
+      })
+      const data = await res.json()
+      if (data.draft) {
+        setDraftReply(data.draft)
+        setInstructions('')
+        setEditMode(false)
+      }
+    } catch (e) {
+      alert(`Erreur: ${e}`)
+    }
+    setGeneratingDraft(false)
   }
 
   async function downloadAttachment(msg: InboxMessage, att: any) {
@@ -72,6 +119,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       const data = await res.json()
       if (data.success) {
         setDraftReply('')
+        setSummary(null)
         await loadMessages()
       } else {
         alert(`Erreur: ${data.error}`)
@@ -85,13 +133,12 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   async function dismissDraft() {
     await supabase.from('inbox_threads').update({ draft_reply: null }).eq('id', thread.id)
     setDraftReply('')
+    setSummary(null)
   }
 
   async function handleSendReply() {
     if (!replyText.trim()) return
     setSending(true)
-
-    // Insert outbound message
     const { error } = await supabase.from('inbox_messages').insert({
       thread_id: thread.id,
       account_id: thread.account_id,
@@ -108,12 +155,10 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       external_id: '',
       sent_at: new Date().toISOString(),
     })
-
     if (!error) {
       setReplyText('')
       setShowReply(false)
       await loadMessages()
-      // Update thread last_message_at
       await supabase.from('inbox_threads').update({
         last_message_at: new Date().toISOString(),
         message_count: (thread.message_count || 0) + 1,
@@ -132,10 +177,33 @@ export default function ThreadDetail({ thread, onClose }: Props) {
             {thread.from_name} &lt;{thread.from_address}&gt;
           </p>
         </div>
-        <button onClick={onClose} className="text-text-muted hover:text-text transition-colors ml-3">
-          <X size={20} />
-        </button>
+        <div className="flex items-center gap-2 ml-3">
+          {!summary && (
+            <button
+              onClick={loadSummary}
+              disabled={loadingSummary}
+              className="flex items-center gap-1 px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 disabled:opacity-50 transition-colors"
+            >
+              {loadingSummary ? <Loader2 size={12} className="animate-spin" /> : <Bot size={12} />}
+              Contexte IA
+            </button>
+          )}
+          <button onClick={onClose} className="text-text-muted hover:text-text transition-colors">
+            <X size={20} />
+          </button>
+        </div>
       </div>
+
+      {/* AI Context Summary */}
+      {summary && (
+        <div className="px-4 py-3 bg-purple-50 border-b border-purple-100 text-sm">
+          <div className="flex items-center gap-1 mb-1 text-xs text-purple-700 font-medium">
+            <Bot size={12} />
+            Résumé du contexte client
+          </div>
+          <div className="text-purple-900 text-xs whitespace-pre-wrap">{summary}</div>
+        </div>
+      )}
 
       {/* Messages */}
       <div className="flex-1 overflow-auto p-4 space-y-4">
@@ -193,45 +261,102 @@ export default function ThreadDetail({ thread, onClose }: Props) {
         )}
       </div>
 
-      {/* Draft AI reply */}
-      {draftReply && (
+      {/* AI Draft Reply */}
+      {(draftReply || !showReply) && messages.length > 0 && messages[messages.length - 1]?.direction === 'inbound' && (
         <div className="border-t border-border p-4 bg-purple-50">
-          <div className="flex items-center gap-1 mb-2 text-xs text-purple-700 font-medium">
-            <Bot size={12} />
-            Brouillon IA — modifiez avant d'envoyer
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-1 text-xs text-purple-700 font-medium">
+              <Bot size={12} />
+              Assistant IA
+            </div>
+            {draftReply && (
+              <button onClick={dismissDraft} className="text-xs text-text-muted hover:text-danger">
+                Ignorer
+              </button>
+            )}
           </div>
-          <textarea
-            value={draftReply}
-            onChange={e => setDraftReply(e.target.value)}
-            rows={6}
-            className="w-full px-3 py-2 text-sm rounded-lg border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300 resize-y"
-          />
-          <div className="flex items-center justify-between mt-2">
-            <button onClick={dismissDraft} className="text-xs text-text-muted hover:text-danger">
-              Ignorer
-            </button>
-            <button
-              onClick={sendDraftReply}
-              disabled={sendingDraft || !draftReply.trim()}
-              className="flex items-center gap-1 px-3 py-1.5 bg-purple-600 text-white rounded-lg text-sm hover:bg-purple-700 disabled:opacity-50 transition-colors"
-            >
-              {sendingDraft ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
-              {sendingDraft ? 'Envoi...' : 'Valider et envoyer'}
-            </button>
-          </div>
+
+          {/* Instructions for AI */}
+          {!editMode && (
+            <div className="mb-3">
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={instructions}
+                  onChange={e => setInstructions(e.target.value)}
+                  placeholder="Instructions pour l'IA (ex: proposer intervention mardi, mentionner garantie...)"
+                  className="flex-1 px-3 py-1.5 text-sm rounded-lg border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                  onKeyDown={e => e.key === 'Enter' && generateDraft()}
+                />
+                <button
+                  onClick={generateDraft}
+                  disabled={generatingDraft}
+                  className="flex items-center gap-1 px-3 py-1.5 bg-purple-600 text-white rounded-lg text-xs hover:bg-purple-700 disabled:opacity-50 transition-colors whitespace-nowrap"
+                >
+                  {generatingDraft ? <Loader2 size={12} className="animate-spin" /> : <RefreshCw size={12} />}
+                  {draftReply ? 'Régénérer' : 'Générer'}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Draft display / edit */}
+          {draftReply && (
+            <>
+              {editMode ? (
+                <textarea
+                  value={draftReply}
+                  onChange={e => setDraftReply(e.target.value)}
+                  rows={8}
+                  className="w-full px-3 py-2 text-sm rounded-lg border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300 resize-y mb-2"
+                  autoFocus
+                />
+              ) : (
+                <div className="bg-white rounded-lg border border-purple-200 p-3 mb-2 text-sm whitespace-pre-wrap text-text-secondary">
+                  {draftReply}
+                </div>
+              )}
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={sendDraftReply}
+                  disabled={sendingDraft || !draftReply.trim()}
+                  className="flex items-center gap-1 px-3 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-primary-hover disabled:opacity-50 transition-colors"
+                >
+                  {sendingDraft ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
+                  {sendingDraft ? 'Envoi...' : 'Envoyer'}
+                </button>
+                <button
+                  onClick={() => setEditMode(!editMode)}
+                  className="flex items-center gap-1 px-3 py-1.5 border border-border text-text-secondary rounded-lg text-sm hover:bg-gray-50 transition-colors"
+                >
+                  <PenLine size={14} />
+                  {editMode ? 'Aperçu' : 'Modifier'}
+                </button>
+                <button
+                  onClick={generateDraft}
+                  disabled={generatingDraft}
+                  className="flex items-center gap-1 px-3 py-1.5 border border-border text-text-secondary rounded-lg text-sm hover:bg-gray-50 transition-colors"
+                >
+                  <RefreshCw size={14} />
+                  Régénérer
+                </button>
+              </div>
+            </>
+          )}
         </div>
       )}
 
-      {/* Reply */}
+      {/* Manual Reply (without AI) */}
       <div className="border-t border-border p-4">
         {showReply ? (
           <div className="space-y-3">
             <textarea
               value={replyText}
               onChange={e => setReplyText(e.target.value)}
-              placeholder="Votre réponse..."
+              placeholder="Votre réponse manuelle..."
               rows={4}
-              className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-none"
+              className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
               autoFocus
             />
             <div className="flex items-center justify-between">
@@ -244,7 +369,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
               <button
                 onClick={handleSendReply}
                 disabled={sending || !replyText.trim()}
-                className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-hover disabled:opacity-50 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-primary-hover disabled:opacity-50 transition-colors"
               >
                 <Send size={14} />
                 {sending ? 'Envoi...' : 'Envoyer'}
@@ -257,7 +382,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
             className="flex items-center gap-2 px-4 py-2 border border-border rounded-lg text-sm text-text-secondary hover:bg-gray-50 transition-colors"
           >
             <Reply size={16} />
-            Répondre
+            Répondre sans IA
           </button>
         )}
       </div>
