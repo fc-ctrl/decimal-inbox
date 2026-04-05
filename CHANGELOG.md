@@ -5,6 +5,14 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et [Se
 
 ---
 
+## [0.1.1] — 2026-04-05
+
+### Corrigé
+- **Vercel SPA routing** : ajout `vercel.json` avec rewrite pour corriger les 404 sur les routes (`/settings`, `/categories`, etc.)
+- **Gmail OAuth** : configuration des secrets Supabase (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`) et ajout de l'URI de redirection Google
+
+---
+
 ## [0.1.0] — 2026-03-18
 
 ### Ajouté

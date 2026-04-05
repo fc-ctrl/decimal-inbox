@@ -20,3 +20,11 @@ Inbox unifiée multi-canal (Gmail, Outlook, SMS) — multi-tenant, vendable via 
 - Supabase URL : `https://plbjafwltwpupspmlnip.supabase.co`
 - Anon key : en variable d'env Vercel
 - Google OAuth : secrets Supabase (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET)
+
+
+## Regle absolue
+
+Avant CHAQUE action (code, creation, modification, suppression) :
+1. REFORMULER ce que tu as compris de la demande
+2. DEMANDER validation avant executerr
+Ne jamais agir sans avoir reformule et obtenu un "oui" explicite.
