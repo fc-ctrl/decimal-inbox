@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
 import type { InboxThread, InboxMessage } from '@/types'
-import { X, Send, Paperclip, Reply } from 'lucide-react'
+import { X, Send, Reply, Download, Bot, Loader2 } from 'lucide-react'
+
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://plbjafwltwpupspmlnip.supabase.co'
+const ATTACHMENT_URL = `${SUPABASE_URL}/functions/v1/inbox-attachment`
+const SEND_REPLY_URL = `${SUPABASE_URL}/functions/v1/inbox-send-reply`
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
@@ -16,6 +20,9 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   const [replyText, setReplyText] = useState('')
   const [sending, setSending] = useState(false)
   const [showReply, setShowReply] = useState(false)
+  const [downloadingAtt, setDownloadingAtt] = useState<string | null>(null)
+  const [draftReply, setDraftReply] = useState(thread.draft_reply || '')
+  const [sendingDraft, setSendingDraft] = useState(false)
 
   useEffect(() => {
     loadMessages()
@@ -30,6 +37,54 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       .order('sent_at', { ascending: true })
     setMessages(data || [])
     setLoading(false)
+    setDraftReply(thread.draft_reply || '')
+  }
+
+  async function downloadAttachment(msg: InboxMessage, att: any) {
+    const key = `${msg.id}-${att.filename}`
+    setDownloadingAtt(key)
+    try {
+      const params = new URLSearchParams({
+        action: 'download',
+        message_id: msg.external_id,
+        attachment_id: att.attachmentId || '',
+        account_id: msg.account_id,
+        filename: att.filename,
+      })
+      const res = await fetch(`${ATTACHMENT_URL}?${params}`)
+      const data = await res.json()
+      if (data.url) window.open(data.url, '_blank')
+    } catch (e) {
+      alert(`Erreur: ${e}`)
+    }
+    setDownloadingAtt(null)
+  }
+
+  async function sendDraftReply() {
+    if (!draftReply.trim()) return
+    setSendingDraft(true)
+    try {
+      const res = await fetch(SEND_REPLY_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ thread_id: thread.id, reply_text: draftReply }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setDraftReply('')
+        await loadMessages()
+      } else {
+        alert(`Erreur: ${data.error}`)
+      }
+    } catch (e) {
+      alert(`Erreur: ${e}`)
+    }
+    setSendingDraft(false)
+  }
+
+  async function dismissDraft() {
+    await supabase.from('inbox_threads').update({ draft_reply: null }).eq('id', thread.id)
+    setDraftReply('')
   }
 
   async function handleSendReply() {
@@ -116,18 +171,56 @@ export default function ThreadDetail({ thread, onClose }: Props) {
               )}
               {msg.attachments && msg.attachments.length > 0 && (
                 <div className="mt-2 flex flex-wrap gap-2">
-                  {msg.attachments.map((att, i) => (
-                    <div key={i} className="flex items-center gap-1 text-xs bg-gray-100 rounded px-2 py-1">
-                      <Paperclip size={12} />
-                      {att.filename}
-                    </div>
-                  ))}
+                  {msg.attachments.map((att, i) => {
+                    const key = `${msg.id}-${att.filename}`
+                    return (
+                      <button
+                        key={i}
+                        onClick={() => downloadAttachment(msg, att)}
+                        disabled={downloadingAtt === key}
+                        className="flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 rounded px-2 py-1 transition-colors cursor-pointer"
+                      >
+                        {downloadingAtt === key ? <Loader2 size={12} className="animate-spin" /> : <Download size={12} />}
+                        {att.filename}
+                        {att.size && <span className="text-text-muted ml-1">({Math.round(att.size / 1024)}Ko)</span>}
+                      </button>
+                    )
+                  })}
                 </div>
               )}
             </div>
           ))
         )}
       </div>
+
+      {/* Draft AI reply */}
+      {draftReply && (
+        <div className="border-t border-border p-4 bg-purple-50">
+          <div className="flex items-center gap-1 mb-2 text-xs text-purple-700 font-medium">
+            <Bot size={12} />
+            Brouillon IA — modifiez avant d'envoyer
+          </div>
+          <textarea
+            value={draftReply}
+            onChange={e => setDraftReply(e.target.value)}
+            rows={6}
+            className="w-full px-3 py-2 text-sm rounded-lg border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300 resize-y"
+          />
+          <div className="flex items-center justify-between mt-2">
+            <button onClick={dismissDraft} className="text-xs text-text-muted hover:text-danger">
+              Ignorer
+            </button>
+            <button
+              onClick={sendDraftReply}
+              disabled={sendingDraft || !draftReply.trim()}
+              className="flex items-center gap-1 px-3 py-1.5 bg-purple-600 text-white rounded-lg text-sm hover:bg-purple-700 disabled:opacity-50 transition-colors"
+            >
+              {sendingDraft ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
+              {sendingDraft ? 'Envoi...' : 'Valider et envoyer'}
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Reply */}
       <div className="border-t border-border p-4">

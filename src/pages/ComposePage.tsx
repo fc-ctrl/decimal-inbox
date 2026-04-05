@@ -1,10 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { supabase } from '@/lib/supabase'
 import type { InboxAccount } from '@/types'
-import { Send, Bot, Loader2, PenTool } from 'lucide-react'
+import { Send, Bot, Loader2, PenTool, Paperclip, X, FileText } from 'lucide-react'
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://plbjafwltwpupspmlnip.supabase.co'
 const COMPOSE_URL = `${SUPABASE_URL}/functions/v1/inbox-compose`
+const ATTACHMENT_URL = `${SUPABASE_URL}/functions/v1/inbox-attachment`
+
+interface UploadedFile {
+  filename: string
+  url: string
+  path: string
+  size: number
+  mimeType: string
+}
 
 export default function ComposePage() {
   const [accounts, setAccounts] = useState<InboxAccount[]>([])
@@ -19,6 +28,9 @@ export default function ComposePage() {
   const [hasHistory, setHasHistory] = useState(false)
   const [detectedCategory, setDetectedCategory] = useState<string | null>(null)
   const [detectedCategoryId, setDetectedCategoryId] = useState<string | null>(null)
+  const [attachments, setAttachments] = useState<UploadedFile[]>([])
+  const [uploading, setUploading] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     async function load() {
@@ -28,6 +40,38 @@ export default function ComposePage() {
     }
     load()
   }, [])
+
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const files = e.target.files
+    if (!files || !accountId) return
+    setUploading(true)
+    for (const file of Array.from(files)) {
+      const formData = new FormData()
+      formData.append('file', file)
+      formData.append('account_id', accountId)
+      try {
+        const res = await fetch(`${ATTACHMENT_URL}?action=upload`, { method: 'POST', body: formData })
+        const data = await res.json()
+        if (data.url) {
+          setAttachments(prev => [...prev, { filename: data.filename, url: data.url, path: data.path, size: data.size, mimeType: data.mimeType }])
+        }
+      } catch (err) {
+        alert(`Erreur upload: ${err}`)
+      }
+    }
+    setUploading(false)
+    if (fileInputRef.current) fileInputRef.current.value = ''
+  }
+
+  function removeAttachment(index: number) {
+    setAttachments(prev => prev.filter((_, i) => i !== index))
+  }
+
+  function formatSize(bytes: number) {
+    if (bytes < 1024) return `${bytes} o`
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} Ko`
+    return `${(bytes / (1024 * 1024)).toFixed(1)} Mo`
+  }
 
   async function generate() {
     if (!to) return
@@ -58,7 +102,15 @@ export default function ComposePage() {
       const res = await fetch(COMPOSE_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'send', account_id: accountId, to, subject, body, category_id: detectedCategoryId }),
+        body: JSON.stringify({
+          action: 'send',
+          account_id: accountId,
+          to,
+          subject,
+          body,
+          category_id: detectedCategoryId,
+          attachments: attachments.map(a => ({ filename: a.filename, url: a.url, path: a.path, size: a.size, mimeType: a.mimeType })),
+        }),
       })
       const data = await res.json()
       if (data.success) {
@@ -72,6 +124,7 @@ export default function ComposePage() {
           setDetectedCategory(null)
           setDetectedCategoryId(null)
           setHasHistory(false)
+          setAttachments([])
         }, 3000)
       } else {
         alert(`Erreur: ${data.error}`)
@@ -148,6 +201,42 @@ export default function ComposePage() {
           />
         </div>
 
+        {/* Pièces jointes */}
+        <div>
+          <label className="text-xs text-text-muted mb-1 block">Pièces jointes</label>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => fileInputRef.current?.click()}
+              disabled={uploading}
+              className="flex items-center gap-1 px-3 py-1.5 border border-border rounded-lg text-sm text-text-secondary hover:bg-gray-50 disabled:opacity-50 transition-colors"
+            >
+              {uploading ? <Loader2 size={14} className="animate-spin" /> : <Paperclip size={14} />}
+              {uploading ? 'Upload...' : 'Joindre un fichier'}
+            </button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              multiple
+              onChange={handleFileUpload}
+              className="hidden"
+            />
+          </div>
+          {attachments.length > 0 && (
+            <div className="mt-2 space-y-1">
+              {attachments.map((a, i) => (
+                <div key={i} className="flex items-center gap-2 bg-gray-50 rounded-lg px-3 py-1.5 text-sm">
+                  <FileText size={14} className="text-text-muted" />
+                  <span className="flex-1 truncate">{a.filename}</span>
+                  <span className="text-xs text-text-muted">{formatSize(a.size)}</span>
+                  <button onClick={() => removeAttachment(i)} className="text-text-muted hover:text-danger">
+                    <X size={14} />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
         {/* Bouton Générer */}
         <button
           onClick={generate}
@@ -194,7 +283,7 @@ export default function ComposePage() {
                 className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-primary-hover disabled:opacity-50 transition-colors"
               >
                 {sending ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
-                {sending ? 'Envoi...' : 'Envoyer'}
+                {sending ? 'Envoi...' : `Envoyer${attachments.length > 0 ? ` (${attachments.length} PJ)` : ''}`}
               </button>
               <button
                 onClick={generate}
