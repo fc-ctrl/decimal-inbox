@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { supabase } from '@/lib/supabase'
 import type { InboxThread, InboxMessage } from '@/types'
-import { X, Send, Reply, Download, Bot, Loader2, PenLine, RefreshCw } from 'lucide-react'
+import { X, Send, Reply, Download, Bot, Loader2, PenLine, RefreshCw, Paperclip, FileText } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
@@ -32,6 +32,9 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   const [generatingDraft, setGeneratingDraft] = useState(false)
   const [editMode, setEditMode] = useState(false)
   const [selectedModel, setSelectedModel] = useState<string>('sonnet')
+  const [replyAttachments, setReplyAttachments] = useState<{filename: string, url: string, path: string, size: number, mimeType: string}[]>([])
+  const [uploadingAtt, setUploadingAtt] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     loadMessages()
@@ -135,6 +138,30 @@ export default function ThreadDetail({ thread, onClose }: Props) {
     await supabase.from('inbox_threads').update({ draft_reply: null }).eq('id', thread.id)
     setDraftReply('')
     setSummary(null)
+  }
+
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const files = e.target.files
+    if (!files) return
+    setUploadingAtt(true)
+    for (const file of Array.from(files)) {
+      const formData = new FormData()
+      formData.append('file', file)
+      formData.append('account_id', thread.account_id)
+      try {
+        const res = await fetch(`${ATTACHMENT_URL}?action=upload`, { method: 'POST', body: formData })
+        const data = await res.json()
+        if (data.url) setReplyAttachments(prev => [...prev, { filename: data.filename, url: data.url, path: data.path, size: data.size, mimeType: data.mimeType }])
+      } catch (err) { alert(`Erreur upload: ${err}`) }
+    }
+    setUploadingAtt(false)
+    if (fileInputRef.current) fileInputRef.current.value = ''
+  }
+
+  function formatSize(bytes: number) {
+    if (bytes < 1024) return `${bytes} o`
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} Ko`
+    return `${(bytes / (1024 * 1024)).toFixed(1)} Mo`
   }
 
   async function handleSendReply() {
@@ -327,6 +354,29 @@ export default function ThreadDetail({ thread, onClose }: Props) {
                 </div>
               )}
 
+              {/* Attachments for reply */}
+              <div className="mb-2">
+                <div className="flex items-center gap-2">
+                  <button onClick={() => fileInputRef.current?.click()} disabled={uploadingAtt} className="flex items-center gap-1 text-xs text-purple-700 hover:text-purple-900">
+                    {uploadingAtt ? <Loader2 size={12} className="animate-spin" /> : <Paperclip size={12} />}
+                    Joindre
+                  </button>
+                  <input ref={fileInputRef} type="file" multiple onChange={handleFileUpload} className="hidden" />
+                </div>
+                {replyAttachments.length > 0 && (
+                  <div className="mt-1 flex flex-wrap gap-1">
+                    {replyAttachments.map((a, i) => (
+                      <div key={i} className="flex items-center gap-1 text-xs bg-white rounded px-2 py-1 border border-purple-200">
+                        <FileText size={10} />
+                        <span className="truncate max-w-32">{a.filename}</span>
+                        <span className="text-text-muted">({formatSize(a.size)})</span>
+                        <button onClick={() => setReplyAttachments(prev => prev.filter((_, j) => j !== i))} className="text-text-muted hover:text-danger"><X size={10} /></button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <div className="flex items-center gap-2">
                 <button
                   onClick={sendDraftReply}
@@ -334,7 +384,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
                   className="flex items-center gap-1 px-3 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-primary-hover disabled:opacity-50 transition-colors"
                 >
                   {sendingDraft ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
-                  {sendingDraft ? 'Envoi...' : 'Envoyer'}
+                  {sendingDraft ? 'Envoi...' : `Envoyer${replyAttachments.length > 0 ? ` (${replyAttachments.length} PJ)` : ''}`}
                 </button>
                 <button
                   onClick={() => setEditMode(!editMode)}
@@ -369,6 +419,23 @@ export default function ThreadDetail({ thread, onClose }: Props) {
               className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
               autoFocus
             />
+            <div className="flex items-center gap-2 mb-2">
+              <button onClick={() => fileInputRef.current?.click()} disabled={uploadingAtt} className="flex items-center gap-1 text-xs text-text-muted hover:text-text-secondary">
+                {uploadingAtt ? <Loader2 size={12} className="animate-spin" /> : <Paperclip size={12} />}
+                Joindre un fichier
+              </button>
+              {replyAttachments.length > 0 && (
+                <div className="flex flex-wrap gap-1">
+                  {replyAttachments.map((a, i) => (
+                    <div key={i} className="flex items-center gap-1 text-xs bg-gray-50 rounded px-2 py-0.5">
+                      <FileText size={10} />
+                      <span className="truncate max-w-32">{a.filename}</span>
+                      <button onClick={() => setReplyAttachments(prev => prev.filter((_, j) => j !== i))} className="text-text-muted hover:text-danger"><X size={10} /></button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
             <div className="flex items-center justify-between">
               <button
                 onClick={() => { setShowReply(false); setReplyText('') }}
