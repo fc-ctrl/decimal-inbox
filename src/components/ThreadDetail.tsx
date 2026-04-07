@@ -235,8 +235,8 @@ export default function ThreadDetail({ thread, onClose }: Props) {
         </div>
       )}
 
-      {/* Messages */}
-      <div className="min-h-0 flex-1 overflow-auto p-4 space-y-4">
+      {/* Messages — limited to 55% so AI block is always visible */}
+      <div className="overflow-auto p-4 space-y-4" style={{ maxHeight: '55vh' }}>
         {loading ? (
           <div className="flex items-center justify-center py-8">
             <div className="animate-spin w-6 h-6 border-3 border-primary border-t-transparent rounded-full" />
@@ -293,7 +293,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
 
       {/* AI Draft Reply */}
       {(draftReply || !showReply) && messages.length > 0 && (
-        <div ref={draftRef} className="border-t border-border p-4 bg-purple-50 max-h-[50vh] overflow-y-auto shrink-0">
+        <div ref={draftRef} className="border-t border-border p-4 bg-purple-50 flex-1 overflow-y-auto">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-1 text-xs text-purple-700 font-medium">
               <Bot size={12} />

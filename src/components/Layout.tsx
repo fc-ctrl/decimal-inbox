@@ -22,7 +22,7 @@ export default function Layout() {
               <span className="text-primary">Decimal</span>{' '}
               <span className="font-light text-text-secondary">Inbox</span>
             </span>
-            <span className="text-[10px] text-text-muted bg-gray-100 px-1.5 py-0.5 rounded-full">v0.5.6</span>
+            <span className="text-[10px] text-text-muted bg-gray-100 px-1.5 py-0.5 rounded-full">v0.6.0</span>
           </div>
         </div>
 
