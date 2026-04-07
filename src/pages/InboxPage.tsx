@@ -6,15 +6,36 @@ import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import ThreadDetail from '@/components/ThreadDetail'
 
+function decodeHtml(text: string): string {
+  const el = document.createElement('textarea')
+  el.innerHTML = text
+  return el.value
+}
+
+function fixEncoding(text: string): string {
+  return decodeHtml(text)
+    .replace(/Ã¢Â€Â"/g, '—')
+    .replace(/Ã¢Â€Â™/g, "'")
+    .replace(/Ã¢Â€Â˜/g, "'")
+    .replace(/Ã¢Â€Âœ/g, '"')
+    .replace(/Ã¢Â€Â/g, '"')
+    .replace(/Ã©/g, 'é')
+    .replace(/Ã¨/g, 'è')
+    .replace(/Ã /g, 'à')
+    .replace(/Ã§/g, 'ç')
+}
+
 const channelIcons: Record<string, string> = {
   gmail: 'G',
   outlook: 'O',
+  facebook: 'F',
   sms: 'S',
 }
 
 const channelColors: Record<string, string> = {
   gmail: 'bg-red-100 text-red-700',
   outlook: 'bg-blue-100 text-blue-700',
+  facebook: 'bg-indigo-100 text-indigo-700',
   sms: 'bg-green-100 text-green-700',
 }
 
@@ -178,17 +199,17 @@ export default function InboxPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between">
                       <span className={`text-sm truncate ${!thread.is_read ? 'font-semibold' : ''}`}>
-                        {thread.from_name || thread.from_address}
+                        {fixEncoding(thread.from_name || thread.from_address)}
                       </span>
                       <span className="text-[11px] text-text-muted ml-2 whitespace-nowrap">
                         {format(new Date(thread.last_message_at), 'dd MMM HH:mm', { locale: fr })}
                       </span>
                     </div>
                     <div className={`text-sm truncate ${!thread.is_read ? 'font-medium text-text' : 'text-text-secondary'}`}>
-                      {thread.subject}
+                      {fixEncoding(thread.subject)}
                     </div>
                     <div className="text-xs text-text-muted truncate mt-0.5">
-                      {thread.snippet}
+                      {fixEncoding(thread.snippet)}
                     </div>
                     <div className="flex items-center gap-2 mt-1">
                       {thread.category && (

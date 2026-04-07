@@ -31,7 +31,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
   const [instructions, setInstructions] = useState('')
   const [generatingDraft, setGeneratingDraft] = useState(false)
   const [editMode, setEditMode] = useState(false)
-  const [selectedModel, setSelectedModel] = useState<string>('sonnet')
+  const [selectedModel, setSelectedModel] = useState<string>('gpt4o-mini')
   const [replyAttachments, setReplyAttachments] = useState<{filename: string, url: string, path: string, size: number, mimeType: string}[]>([])
   const [uploadingAtt, setUploadingAtt] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -315,9 +315,10 @@ export default function ThreadDetail({ thread, onClose }: Props) {
                   onChange={e => setSelectedModel(e.target.value)}
                   className="text-xs border border-purple-200 rounded-lg px-2 py-1.5 bg-white"
                 >
-                  <option value="haiku">Haiku (rapide)</option>
-                  <option value="sonnet">Sonnet (recommandé)</option>
-                  <option value="opus">Opus (complexe)</option>
+                  <option value="gpt4o-mini">GPT-4o mini (rapide)</option>
+                  <option value="gpt4o">GPT-4o (qualité)</option>
+                  <option value="sonnet">Sonnet (Anthropic)</option>
+                  <option value="opus">Opus (Anthropic)</option>
                 </select>
                 <input
                   type="text"

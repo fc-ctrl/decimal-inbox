@@ -18,7 +18,7 @@ interface UploadedFile {
 export default function ComposePage() {
   const [accounts, setAccounts] = useState<InboxAccount[]>([])
   const [accountId, setAccountId] = useState('')
-  const [selectedModel, setSelectedModel] = useState('sonnet')
+  const [selectedModel, setSelectedModel] = useState('gpt4o-mini')
   const [to, setTo] = useState('')
   const [subject, setSubject] = useState('')
   const [notes, setNotes] = useState('')
@@ -173,9 +173,10 @@ export default function ComposePage() {
               onChange={e => setSelectedModel(e.target.value)}
               className="w-full text-sm border border-border rounded-lg px-3 py-2"
             >
-              <option value="haiku">Haiku (rapide)</option>
-              <option value="sonnet">Sonnet (recommandé)</option>
-              <option value="opus">Opus (complexe)</option>
+              <option value="gpt4o-mini">GPT-4o mini (rapide)</option>
+              <option value="gpt4o">GPT-4o (qualité)</option>
+              <option value="sonnet">Sonnet (Anthropic)</option>
+              <option value="opus">Opus (Anthropic)</option>
             </select>
           </div>
         </div>

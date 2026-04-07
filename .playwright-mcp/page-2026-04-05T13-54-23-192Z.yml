@@ -1,0 +1,692 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e8]:
+      - img [ref=e9]
+      - generic [ref=e12]: Decimal Inbox
+      - generic [ref=e13]: v0.5.6
+    - navigation [ref=e14]:
+      - link "Inbox" [ref=e15] [cursor=pointer]:
+        - /url: /
+        - img [ref=e16]
+        - text: Inbox
+      - link "Composer" [ref=e19] [cursor=pointer]:
+        - /url: /compose
+        - img [ref=e20]
+        - text: Composer
+      - link "Catégories" [ref=e25] [cursor=pointer]:
+        - /url: /categories
+        - img [ref=e26]
+        - text: Catégories
+      - link "Paramètres" [ref=e29] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e30]
+        - text: Paramètres
+    - generic [ref=e34]:
+      - generic [ref=e35]: fc@decimal-ia.com
+      - button "Déconnexion" [ref=e36]:
+        - img [ref=e37]
+  - main [ref=e40]:
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - heading "Inbox 25" [level=1] [ref=e45]:
+              - img [ref=e46]
+              - text: Inbox
+              - generic [ref=e49]: "25"
+            - button [ref=e50]:
+              - img [ref=e51]
+          - generic [ref=e56]:
+            - img [ref=e57]
+            - textbox "Rechercher..." [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - img [ref=e63]
+              - combobox [ref=e65]:
+                - option "Toutes catégories" [selected]
+                - option "Commercial / Propale"
+                - option "SAV / Support"
+                - option "Relance"
+                - option "Litige"
+            - combobox [ref=e66]:
+              - option "Tous canaux" [selected]
+              - option "Gmail"
+              - option "Outlook"
+              - option "SMS"
+        - generic [ref=e67]:
+          - generic [ref=e69] [cursor=pointer]:
+            - generic [ref=e70]: O
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - generic [ref=e73]: Amazon.fr
+                - generic [ref=e74]: 05 avr. 15:14
+              - generic [ref=e75]: Nous avons trouvé quelque chose qui pourrait vous plaire
+              - generic [ref=e76]: Besoin d’un autre coup d’œil ? Découvrez des articles similaires à ce que vous avez récemment vu sur Amazon.͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌
+              - generic [ref=e77]:
+                - generic [ref=e78]: Commercial / Propale
+                - button [ref=e79]:
+                  - img [ref=e80]
+                - button [ref=e82]:
+                  - img [ref=e83]
+          - generic [ref=e87] [cursor=pointer]:
+            - generic [ref=e88]: O
+            - generic [ref=e89]:
+              - generic [ref=e90]:
+                - generic [ref=e91]: testlitige@cosy-groupe.fr
+                - generic [ref=e92]: 05 avr. 14:21
+              - generic [ref=e93]: problème piscine
+              - generic [ref=e94]: Bonjour, Je prends note de votre retour suite à votre intervention. Toutefois, la présence d’une fuite dans un ouvrage réceptionné en août 2024 engage votre responsabilité au titre des garanties légales, notamment la garantie de parfait
+              - generic [ref=e95]:
+                - generic [ref=e96]: Litige
+                - button [ref=e97]:
+                  - img [ref=e98]
+                - button [ref=e100]:
+                  - img [ref=e101]
+          - generic [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]: O
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - generic [ref=e109]: Amazon Marketplace
+                - generic [ref=e110]: 05 avr. 13:28
+              - generic [ref=e111]: Costanza, évaluerez-vous votre transaction sur amazon.fr ?
+              - generic [ref=e112]: Bonjour Costanza,pourriez-vous prendre une minute pour partager votre expérience ? Vous avez commandé Oxeo Aspirateur Eau et poussière Professionnel 3000W – 70 litres – Tri Moteurs - sans Sac - cuve 70L - livré avec Accessoires (Neuf) Novoo Fra
+              - generic [ref=e113]:
+                - generic [ref=e114]: SAV / Support
+                - button [ref=e115]:
+                  - img [ref=e116]
+                - button [ref=e118]:
+                  - img [ref=e119]
+          - generic [ref=e123] [cursor=pointer]:
+            - generic [ref=e124]: O
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - generic [ref=e127]: Tommy Hilfiger
+                - generic [ref=e128]: 05 avr. 13:05
+              - generic [ref=e129]: Surprise ! Voici votre cadeau d'anniversaire.
+              - generic [ref=e130]: Prenez de l'avance avec votre remise Tommy Together. ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏
+              - generic [ref=e131]:
+                - generic [ref=e132]: Commercial / Propale
+                - button [ref=e133]:
+                  - img [ref=e134]
+                - button [ref=e136]:
+                  - img [ref=e137]
+          - generic [ref=e141] [cursor=pointer]:
+            - generic [ref=e142]: O
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - generic [ref=e145]: IHM - Moineau Instruments
+                - generic [ref=e146]: 05 avr. 12:21
+              - generic [ref=e147]: Deux ans déjà... Il est temps de revenir chez MOINEAU Instruments ⏳
+              - generic [ref=e148]: Votre expertise en mesure nous a manqué. Vous pouvez vous désabonner de nos e-mails ici. Bonjour fabrice, Deux ans se sont écoulés depuis votre dernière visite chez MOINEAU Instruments. Beaucoup de choses ont changé, et nous somme
+              - generic [ref=e149]:
+                - generic [ref=e150]: Commercial / Propale
+                - button [ref=e151]:
+                  - img [ref=e152]
+                - button [ref=e154]:
+                  - img [ref=e155]
+          - generic [ref=e159] [cursor=pointer]:
+            - generic [ref=e160]: O
+            - generic [ref=e161]:
+              - generic [ref=e162]:
+                - generic [ref=e163]: fc@decimal-ia.com
+                - generic [ref=e164]: 05 avr. 12:21
+              - generic [ref=e165]: Relance Ã¢Â€Â“ Votre devis piscine du 20 mars
+              - generic [ref=e166]: "--- Bonjour Monsieur Aubert, J'espère que vous allez bien. Je vous recontacte suite à l'envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l'occasion de la consulter et d'envisager les prochaines éta"
+              - generic [ref=e167]:
+                - generic [ref=e168]: Relance
+                - button [ref=e169]:
+                  - img [ref=e170]
+                - button [ref=e172]:
+                  - img [ref=e173]
+          - generic [ref=e177] [cursor=pointer]:
+            - generic [ref=e178]: G
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - generic [ref=e181]: Vous
+                - generic [ref=e182]: 05 avr. 12:21
+              - generic [ref=e183]: Relance – Votre devis piscine du 20 mars
+              - generic [ref=e184]: "--- Bonjour Monsieur Aubert, J'espère que vous allez bien. Je vous recontacte suite à l'envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l'occasion de la consulter et d'envisager les prochaines étapes ? Nous serions ravis de répondre à vos questions ou d'affiner notre offre selon vos souhaits. Avant la belle saison, c'est le moment idéal pour lancer les travaux et profiter rapidement de votre nouvelle piscine. Nous vous proposons : - Un entreti"
+              - generic [ref=e185]:
+                - generic [ref=e186]: Commercial / Propale
+                - button [ref=e187]:
+                  - img [ref=e188]
+                - button [ref=e190]:
+                  - img [ref=e191]
+          - generic [ref=e195] [cursor=pointer]:
+            - generic [ref=e196]: G
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - generic [ref=e199]: fc@decimal-ia.com
+                - generic [ref=e200]: 05 avr. 12:21
+              - generic [ref=e201]: Relance Ã¢Â€Â“ Votre devis piscine du 20 mars
+              - generic [ref=e202]: "--- Bonjour Monsieur Aubert, J&#39;espère que vous allez bien. Je vous recontacte suite à l&#39;envoi de notre proposition pour votre projet de piscine, datée du 20 mars dernier. Avez-vous eu l&#39;"
+              - generic [ref=e203]:
+                - generic [ref=e204]: Relance
+                - button [ref=e205]:
+                  - img [ref=e206]
+                - button [ref=e208]:
+                  - img [ref=e209]
+          - generic [ref=e213] [cursor=pointer]:
+            - generic [ref=e214]: G
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - generic [ref=e217]: Vercel
+                - generic [ref=e218]: 05 avr. 12:20
+              - generic [ref=e219]: Failed production deployment on team 'fc-ctrl's projects'
+              - generic [ref=e220]: Hi fc-ctrl, There was an error deploying decimal-inbox to the production environment on fc-ctrl&#39;s projects. See deployment details You can also view latest deployments for branch master. If you
+              - generic [ref=e221]:
+                - generic [ref=e222]: SAV / Support
+                - button [ref=e223]:
+                  - img [ref=e224]
+                - button [ref=e226]:
+                  - img [ref=e227]
+          - generic [ref=e231] [cursor=pointer]:
+            - generic [ref=e232]: O
+            - generic [ref=e233]:
+              - generic [ref=e234]:
+                - generic [ref=e235]: FLORENCE FERON
+                - generic [ref=e236]: 05 avr. 11:24
+              - generic [ref=e237]: C'est Madame FERON Florence au sujet du Don!!!
+              - generic [ref=e238]: Bonjour, Je suis veuve Mme FERON Florence, médecin sans frontières. J'ai 79 ans, atteint du cancer, je présume que cette maladie et la vieillesse me consument. Les deux enfants que j'ai eus dans ma vie ainsi que mon défunt époux qui fut négociant au Qata
+              - generic [ref=e239]:
+                - button [ref=e240]:
+                  - img [ref=e241]
+                - button [ref=e243]:
+                  - img [ref=e244]
+          - generic [ref=e248] [cursor=pointer]:
+            - generic [ref=e249]: O
+            - generic [ref=e250]:
+              - generic [ref=e251]:
+                - generic [ref=e252]: noCRM.io
+                - generic [ref=e253]: 05 avr. 11:12
+              - generic [ref=e254]: Votre compte sera supprimé dans 10 jours.
+              - generic [ref=e255]: cosypiscine.nocrm.io Votre compte sera supprimé dans 10 jours. Compte cosypiscine.nocrm.io Bonjour fabrice, Votre compte va être supprimé dans 10 jours, et toutes vos données seront écrasées ! Si vous ne voulez pas que vos données soient su
+              - generic [ref=e256]:
+                - generic [ref=e257]: Litige
+                - button [ref=e258]:
+                  - img [ref=e259]
+                - button [ref=e261]:
+                  - img [ref=e262]
+          - generic [ref=e266] [cursor=pointer]:
+            - generic [ref=e267]: O
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - generic [ref=e270]: Kobo
+                - generic [ref=e271]: 05 avr. 11:10
+              - generic [ref=e272]: Profitez du Mois du Polar 2026
+              - generic [ref=e273]: Sélection thriller à prix cadeau | ÉVÉNEMENT De 9,99 € À 3,99 € De 14,99 € À 5,99 € De 6,99 € À 2,49 € De 5,99 € À 1,99 € De 16,99 € À 6,49 € De 8,49 € À 2,99 € De 8,99 € À 3,49 €
+              - generic [ref=e274]:
+                - generic [ref=e275]: Commercial / Propale
+                - button [ref=e276]:
+                  - img [ref=e277]
+                - button [ref=e279]:
+                  - img [ref=e280]
+          - generic [ref=e284] [cursor=pointer]:
+            - generic [ref=e285]: O
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - generic [ref=e288]: Communauté IA (Skool)
+                - generic [ref=e289]: 05 avr. 10:21
+              - generic [ref=e290]: 1 event happening tomorrow
+              - generic [ref=e291]: Communauté IA 1 event happening tomorrow Yass Q&R📞 Monday, April 6th • 6:30pm - 7:30pm (Paris time) Je réponds à toutes vos questions pendant ce live hebdomadaire, l'objectif étant d'aider le maximum de personnes et faciliter l'échange :)
+              - generic [ref=e292]:
+                - button [ref=e293]:
+                  - img [ref=e294]
+                - button [ref=e296]:
+                  - img [ref=e297]
+          - generic [ref=e301] [cursor=pointer]:
+            - generic [ref=e302]: O
+            - generic [ref=e303]:
+              - generic [ref=e304]:
+                - generic [ref=e305]: LJ MotorSport
+                - generic [ref=e306]: 05 avr. 10:05
+              - generic [ref=e307]: Les nouveautés LJMotorSport !
+              - generic [ref=e308]: Les nouveautés LJMotorSport !‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+              - generic [ref=e309]:
+                - generic [ref=e310]: Commercial / Propale
+                - button [ref=e311]:
+                  - img [ref=e312]
+                - button [ref=e314]:
+                  - img [ref=e315]
+          - generic [ref=e319] [cursor=pointer]:
+            - generic [ref=e320]: G
+            - generic [ref=e321]:
+              - generic [ref=e322]:
+                - generic [ref=e323]: Claude Team
+                - generic [ref=e324]: 05 avr. 10:00
+              - generic [ref=e325]: A credit on us, plus discounts on extra usage
+              - generic [ref=e326]: Hi, We&#39;re offering you a one-time credit for extra usage to your account, equal to your monthly subscription price. Redeem it here by April 17. Once claimed, it&#39;s good for 90 days across Claude
+              - generic [ref=e327]:
+                - generic [ref=e328]: Commercial / Propale
+                - button [ref=e329]:
+                  - img [ref=e330]
+                - button [ref=e332]:
+                  - img [ref=e333]
+          - generic [ref=e337] [cursor=pointer]:
+            - generic [ref=e338]: O
+            - generic [ref=e339]:
+              - generic [ref=e340]:
+                - generic [ref=e341]: Maxi Zoo
+                - generic [ref=e342]: 05 avr. 09:11
+              - generic [ref=e343]: "-15% dès 79€ : la chasse à l'offre est ouverte ! 🐣"
+              - generic [ref=e344]: "A vos paniers, prêts... partez ! Online Version Nos marques exclusives | Maxi Zoo Friends | Trouver votre magasin 🔥 EXCLU WEB : A vos paniers, prêts... partez ! 🐣 -15% dès 79€ d’achat avec le code MAXI15 💻Sur TOUT* le site ! R"
+              - generic [ref=e345]:
+                - generic [ref=e346]: Commercial / Propale
+                - button [ref=e347]:
+                  - img [ref=e348]
+                - button [ref=e350]:
+                  - img [ref=e351]
+          - generic [ref=e355] [cursor=pointer]:
+            - generic [ref=e356]: O
+            - generic [ref=e357]:
+              - generic [ref=e358]:
+                - generic [ref=e359]: Tommy Hilfiger
+                - generic [ref=e360]: 05 avr. 08:26
+              - generic [ref=e361]: "Nouveau : notre sélection de tenues de soirée."
+              - generic [ref=e362]: "Jusqu'à -50% : c'est bientôt fini ! ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏"
+              - generic [ref=e363]:
+                - generic [ref=e364]: Commercial / Propale
+                - button [ref=e365]:
+                  - img [ref=e366]
+                - button [ref=e368]:
+                  - img [ref=e369]
+          - generic [ref=e373] [cursor=pointer]:
+            - generic [ref=e374]: O
+            - generic [ref=e375]:
+              - generic [ref=e376]:
+                - generic [ref=e377]: Info Compte Express
+                - generic [ref=e378]: 05 avr. 07:23
+              - generic [ref=e379]: Nouveaux documents électroniques à votre disposition
+              - generic [ref=e380]: Bonjour, Nous vous informons que de nouveaux documents sont disponibles dans votre espace de banque à distance pour FSECL ESPAGNE. - Extrait de compte - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de votre
+              - generic [ref=e381]:
+                - generic [ref=e382]: SAV / Support
+                - button [ref=e383]:
+                  - img [ref=e384]
+                - button [ref=e386]:
+                  - img [ref=e387]
+          - generic [ref=e391] [cursor=pointer]:
+            - generic [ref=e392]: O
+            - generic [ref=e393]:
+              - generic [ref=e394]:
+                - generic [ref=e395]: Masterlib - Masterlib
+                - generic [ref=e396]: 05 avr. 07:08
+              - generic [ref=e397]: Vos notifications vous attendent — Ne laissez rien passer !
+              - generic [ref=e398]: "Bonjour, Connectez-vous pour lire vos notifications : Projet MOE_Matthias Clement & Clelia Piaton 2 message(s) non lu(s) Ne perdez pas une minute, connectez-vous ici : Masterlib Astuce: consultez vos notifications rapidement pour éviter les r"
+              - generic [ref=e399]:
+                - generic [ref=e400]: SAV / Support
+                - button [ref=e401]:
+                  - img [ref=e402]
+                - button [ref=e404]:
+                  - img [ref=e405]
+          - generic [ref=e409] [cursor=pointer]:
+            - generic [ref=e410]: O
+            - generic [ref=e411]:
+              - generic [ref=e412]:
+                - generic [ref=e413]: Info Compte Express
+                - generic [ref=e414]: 05 avr. 06:55
+              - generic [ref=e415]: Nouveaux documents électroniques à votre disposition
+              - generic [ref=e416]: Bonjour, Nous vous informons que de nouveaux documents sont disponibles dans votre espace de banque à distance pour COSTANZA FINANCES. - Extrait de compte - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de vo
+              - generic [ref=e417]:
+                - button [ref=e418]:
+                  - img [ref=e419]
+                - button [ref=e421]:
+                  - img [ref=e422]
+          - generic [ref=e426] [cursor=pointer]:
+            - generic [ref=e427]: O
+            - generic [ref=e428]:
+              - generic [ref=e429]:
+                - generic [ref=e430]: Outlook
+                - generic [ref=e431]: 05 avr. 04:49
+              - generic [ref=e432]: "Synthèse quotidienne des réactions : dimanche 5 avril 2026"
+              - generic [ref=e433]: Microsoft Outlook Christophe Gay a réagi à votre message sam. 04/04/2026 10:35:00 Message Monsieur Breysse Salut Chris Cijoint un message de Monsieur Plutôt positif le type Bonjour Monsieur Costanza, Dans la suite de notre entretien, je vous
+              - generic [ref=e434]:
+                - button [ref=e435]:
+                  - img [ref=e436]
+                - button [ref=e438]:
+                  - img [ref=e439]
+          - generic [ref=e443] [cursor=pointer]:
+            - generic [ref=e444]: O
+            - generic [ref=e445]:
+              - generic [ref=e446]:
+                - generic [ref=e447]: so_send_journal_fond@sips-services.com
+                - generic [ref=e448]: 05 avr. 00:28
+              - generic [ref=e449]: liste des opérations effectuées
+              - generic [ref=e450]:
+                - generic [ref=e451]: SAV / Support
+                - button [ref=e452]:
+                  - img [ref=e453]
+                - button [ref=e455]:
+                  - img [ref=e456]
+          - generic [ref=e460] [cursor=pointer]:
+            - generic [ref=e461]: O
+            - generic [ref=e462]:
+              - generic [ref=e463]:
+                - generic [ref=e464]: so_send_journal_fond@sips-services.com
+                - generic [ref=e465]: 05 avr. 00:19
+              - generic [ref=e466]: liste des paiements traités
+              - generic [ref=e467]:
+                - generic [ref=e468]: SAV / Support
+                - button [ref=e469]:
+                  - img [ref=e470]
+                - button [ref=e472]:
+                  - img [ref=e473]
+          - generic [ref=e477] [cursor=pointer]:
+            - generic [ref=e478]: O
+            - generic [ref=e479]:
+              - generic [ref=e480]:
+                - generic [ref=e481]: Uber
+                - generic [ref=e482]: 04 avr. 23:53
+              - generic [ref=e483]: Vos démarches pour rejoindre la plateforme Uber
+              - generic [ref=e484]: Bonjour Fabrice, Afin de vous accompagner au mieux, nous vous proposons de sélectionner la situation qui vous correspond. J'aimerais discuter avec un conseiller Je suis inscrit à l'examen VTC J'hésite à m'inscrire à l'examen VTC
+              - generic [ref=e485]:
+                - generic [ref=e486]: Commercial / Propale
+                - button [ref=e487]:
+                  - img [ref=e488]
+                - button [ref=e490]:
+                  - img [ref=e491]
+          - generic [ref=e495] [cursor=pointer]:
+            - generic [ref=e496]: O
+            - generic [ref=e497]:
+              - generic [ref=e498]:
+                - generic [ref=e499]: Info Compte Express
+                - generic [ref=e500]: 04 avr. 23:43
+              - generic [ref=e501]: Nouveaux documents électroniques à votre disposition
+              - generic [ref=e502]: Bonjour, Nous vous informons qu'un nouveau document est disponible dans votre espace de banque à distance pour COSY. - Facture pro Vous pourrez le(s) consulter dans la rubrique Documents ou e-Documents de votre site ou application mobile. Votr
+              - generic [ref=e503]:
+                - generic [ref=e504]: SAV / Support
+                - button [ref=e505]:
+                  - img [ref=e506]
+                - button [ref=e508]:
+                  - img [ref=e509]
+          - generic [ref=e513] [cursor=pointer]:
+            - generic [ref=e514]: O
+            - generic [ref=e515]:
+              - generic [ref=e516]:
+                - generic [ref=e517]: Emma | GetYourGuide
+                - generic [ref=e518]: 04 avr. 22:56
+              - generic [ref=e519]: 🌈 Ces 10 destinations aux coloris éblouissants ne sont pas le fruit de l’IA
+              - generic [ref=e520]: "Mais aussi : les plus belles îles d’Italie. ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌"
+              - generic [ref=e521]:
+                - generic [ref=e522]: Commercial / Propale
+                - button [ref=e523]:
+                  - img [ref=e524]
+                - button [ref=e526]:
+                  - img [ref=e527]
+          - generic [ref=e531] [cursor=pointer]:
+            - generic [ref=e532]: O
+            - generic [ref=e533]:
+              - generic [ref=e534]:
+                - generic [ref=e535]: Discord
+                - generic [ref=e536]: 04 avr. 22:56
+              - generic [ref=e537]: Tu as manqué des messages sur VISION IA
+              - generic [ref=e538]: "Tu as reçu 4 nouveaux messages #vérification (VISION IA) Voir les messages #accueil (VISION IA) Voir les messages Besoin d'aide ? Contacte notre équipe d'assistance ou envoie-nous un message sur X @discord. Tu souhaites nous faire part de"
+              - generic [ref=e539]:
+                - button [ref=e540]:
+                  - img [ref=e541]
+                - button [ref=e543]:
+                  - img [ref=e544]
+          - generic [ref=e548] [cursor=pointer]:
+            - generic [ref=e549]: O
+            - generic [ref=e550]:
+              - generic [ref=e551]:
+                - generic [ref=e552]: LinkedIn
+                - generic [ref=e553]: 04 avr. 21:58
+              - generic [ref=e554]: Fabrice, votre profil attire l’attention
+              - generic [ref=e555]: Vous avez été remarqué(e) par une personne travaillant chez LÉA COMPOSITES ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+              - generic [ref=e556]:
+                - button [ref=e557]:
+                  - img [ref=e558]
+                - button [ref=e560]:
+                  - img [ref=e561]
+          - generic [ref=e565] [cursor=pointer]:
+            - generic [ref=e566]: O
+            - generic [ref=e567]:
+              - generic [ref=e568]:
+                - generic [ref=e569]: LinkedIn
+                - generic [ref=e570]: 04 avr. 19:58
+              - generic [ref=e571]: "Maxime PATOU, Account Executive Enterprise - Ontario & Québec, a réagi à un post : C’est vendredi ! 🃏 10 ans…"
+              - generic [ref=e572]: C’est vendredi ! 🃏 10 ans… ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+              - generic [ref=e573]:
+                - button [ref=e574]:
+                  - img [ref=e575]
+                - button [ref=e577]:
+                  - img [ref=e578]
+          - generic [ref=e582] [cursor=pointer]:
+            - generic [ref=e583]: O
+            - generic [ref=e584]:
+              - generic [ref=e585]:
+                - generic [ref=e586]: LinkedIn
+                - generic [ref=e587]: 04 avr. 19:32
+              - generic [ref=e588]: Vous avez 1 nouvelle invitation
+              - generic [ref=e589]: Vous avez 1 nouvelle invitation ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏
+              - generic [ref=e590]:
+                - button [ref=e591]:
+                  - img [ref=e592]
+                - button [ref=e594]:
+                  - img [ref=e595]
+          - generic [ref=e599] [cursor=pointer]:
+            - generic [ref=e600]: G
+            - generic [ref=e601]:
+              - generic [ref=e602]:
+                - generic [ref=e603]: fc@decimal-ia.com
+                - generic [ref=e604]: 04 avr. 17:06
+              - generic [ref=e605]: nouveau client
+              - generic [ref=e606]: type client --- This email was sent automatically with n8n
+              - generic [ref=e607]:
+                - generic [ref=e608]: Commercial / Propale
+                - button [ref=e609]:
+                  - img [ref=e610]
+                - button [ref=e612]:
+                  - img [ref=e613]
+          - generic [ref=e617] [cursor=pointer]:
+            - generic [ref=e618]: G
+            - generic [ref=e619]:
+              - generic [ref=e620]:
+                - generic [ref=e621]: fc@decimal-ia.com
+                - generic [ref=e622]: 04 avr. 16:13
+              - generic [ref=e623]: nouveau client
+              - generic [ref=e624]: type client --- This email was sent automatically with n8n
+              - generic [ref=e625]:
+                - generic [ref=e626]: Commercial / Propale
+                - button [ref=e627]:
+                  - img [ref=e628]
+                - button [ref=e630]:
+                  - img [ref=e631]
+      - generic [ref=e634]:
+        - generic [ref=e635]:
+          - generic [ref=e636]:
+            - heading "Surprise ! Voici votre cadeau d'anniversaire." [level=2] [ref=e637]
+            - paragraph [ref=e638]: Tommy Hilfiger <news@mailing.tommy.com>
+          - generic [ref=e639]:
+            - button "Contexte IA" [ref=e640]:
+              - img [ref=e641]
+              - text: Contexte IA
+            - button [ref=e644]:
+              - img [ref=e645]
+        - generic [ref=e649]:
+          - generic [ref=e650]:
+            - generic [ref=e651]: Tommy Hilfiger
+            - generic [ref=e652]: 05 avr. 2026 13:05
+          - article [ref=e654]:
+            - banner "header" [ref=e655]:
+              - link:
+                - /url: "#main"
+              - link "Voir en ligne" [ref=e656] [cursor=pointer]:
+                - /url: https://view.mailing.tommy.com/?qs=eyJkZWtJZCI6IjM4ZmIwMzM4LTc3NmMtNDBlNS1iOTM4LTYzZjMwZDA4NGE3YSIsImRla1ZlcnNpb24iOjEsIml2IjoiTWNsMU1OS1ByeG9BbUdYRGdUTTU5Zz09IiwiY2lwaGVyVGV4dCI6IjdJME1DcDh3ajFERm5Na2ZtZW5teXFNVkJmS3FDWllGY2tBSUg3THRLV0lIbWsrU21rbWo1eG9SeUE2NEh1ZWU4dHJsUU5PdjNwNllpeWhlamJNZzFRK3JuQ1RhaXlJM2FMQUpKSG1Hd2NMYWZ5YWV4U2ZneHBCaTIrKzVCdDgrTnVneHlYVXcwbyt2R2dDWVpjT0JNem4yIiwiYXV0aFRhZyI6IkpwN0ZKK0RHa0dMYjc3a0czejQyNkE9PSJ9
+              - link "Tommy Hilfiger logo" [ref=e657] [cursor=pointer]:
+                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjNhODdkOTgzLWM1MDUtNDliMy05NDA0LTQ1MDMxZWY4NGM1YSIsImRla1ZlcnNpb24iOjEsIml2IjoiUHFPY1lxU1pFYy9VSEJvenF0Wnp6dz09IiwiY2lwaGVyVGV4dCI6Ii9CMG1uc2RlTTRrbzBjdG5hQnZYclBBUVhIUW9qMVpROGFwa2V4TURQU2NzN2h1NUhpMFI1UDJYWWxmV2pRSGVpQ09DM09BRXFBUjM2dnl6SFlGcktXRUFVZi96YUVjblpENmpuR0trbVJIUDFCd2FNNnJXYzg4PSIsImF1dGhUYWciOiI2dnl6SFlGcktXRUFVZi96YUVjblpBPT0ifQ%3D%3D
+                - img "Tommy Hilfiger logo" [ref=e658]
+            - article "article" [ref=e659]:
+              - link "Description of image." [ref=e660] [cursor=pointer]:
+                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6Ijk4OWZiODE3LTI3ZGUtNDRhOC05MzE1LWEyYjBmMGNlNzA4ZSIsImRla1ZlcnNpb24iOjEsIml2IjoieXVOSHNLV1FwV1ZNRFBlSTd2eFpvQT09IiwiY2lwaGVyVGV4dCI6Im80UXBOT2ZCUUdFMGZCdVJBZytKZU9rbU5RNFBVeWNjV3MvazJ5SnNZQzZRYlZIM242SHFjU2xvZjZBWFNOZUgzY2tiNG1XWUowQy90cStaWUcxSDI0LzE4Z2hweHJkY2RNcmpSN0Nsa0tWbFRBejNpTzc4V2FBPSIsImF1dGhUYWciOiJ0cStaWUcxSDI0LzE4Z2hweHJkY2RBPT0ifQ%3D%3D
+                - table [ref=e661]:
+                  - rowgroup [ref=e662]:
+                    - row "Description of image." [ref=e663]:
+                      - img "Description of image." [ref=e664]:
+                        - paragraph [ref=e667]: Tommy Together
+                        - table [ref=e668]:
+                          - rowgroup [ref=e669]:
+                            - row "Votre cadeau d'anniversaire exclusif" [ref=e670]:
+                              - cell "Votre cadeau d'anniversaire exclusif" [ref=e671]:
+                                - heading "Votre cadeau d'anniversaire exclusif" [level=1] [ref=e674]
+              - heading "Pleins feux sur vous" [level=2] [ref=e675]
+              - paragraph [ref=e676]: "Sublimez votre tenue d'anniversaire. Profitez d'un cadeau de notre part : une remise pour vous faire plaisir à votre guise."
+              - separator [ref=e677]
+              - heading "Profitez de 15 % de remise*" [level=2] [ref=e678]
+              - paragraph [ref=e679]: Saisissez ce code lors du paiement en ligne ou présentez cet e-mail en magasin.
+              - paragraph [ref=e680]: TOMMY-BD668214672
+              - link "DÉCOUVRIR" [ref=e681] [cursor=pointer]:
+                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjZiNGFkMTEwLTY0N2ItNDQ2Ni05MjA1LTIwZTUzMzgzNDExNCIsImRla1ZlcnNpb24iOjEsIml2IjoidGVaMkdOTWdWQmMrTFVIWXpoTnk3QT09IiwiY2lwaGVyVGV4dCI6IkpHb2lFc3ROTjBLck9maVE2c0xBOUNITTFtSG50ZzAxRUVFT3YrLzlIV0wzNGptbVk1d3FhZFRmNlZuM2pmdFNMZE5oWDRsZlVPczY4S0JQOFlDNDh5Y1ZUc2N3c3dONjFMWG1kaGpUSUZRWFBpMUIyTTRUY3V3PSIsImF1dGhUYWciOiI4S0JQOFlDNDh5Y1ZUc2N3c3dONjFBPT0ifQ%3D%3D
+              - separator [ref=e682]
+              - link [ref=e683] [cursor=pointer]:
+                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImY2OWMzYjU1LTQyMzMtNDY2MC05OTcxLWZmZjZiNWU1ZTkyOCIsImRla1ZlcnNpb24iOjEsIml2Ijoib1JvNjVTeUV4ejlaQTVwZTQ5dUpjUT09IiwiY2lwaGVyVGV4dCI6IkV4YXhZSzJIUVZneEYyMDlMcHlzN2JmUzFReFVLS3JWVUF6MDhNQ09yK2o0Ujh2dUoxRVVNZFBUYnByRlYrT1o2cSsrZlZxWTROK2w2QTV1Rk95TEo0SVJ2SkNaMUtIL2k2RWFPdVVzaE1jL1dRT2FYdVBiaVhFPSIsImF1dGhUYWciOiI2QTV1Rk95TEo0SVJ2SkNaMUtIL2l3PT0ifQ%3D%3D
+              - link [ref=e684] [cursor=pointer]:
+                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImFhMzliNjY5LWM3YjItNDMwZC04OGY2LTVmMzliODQwOGZlZSIsImRla1ZlcnNpb24iOjEsIml2IjoiYTQrc01mZnljWllIYk5nelNhYTdQUT09IiwiY2lwaGVyVGV4dCI6IkJlNlNNNm5zTDZMdUU4cFpMNkJjNkZ3emgxV2RsekFnSnRhMnlXa1BFVnM3NzVDeGFVWjJFTmk2ai9kaEFTM3F4eXhWVnQySmN3dUZ0M3Zsd1NFUmgvZ29tWkZUTWxLcU1XdVByREgzOG5HV0IyellNMG1tdXowPSIsImF1dGhUYWciOiJ0M3Zsd1NFUmgvZ29tWkZUTWxLcU1RPT0ifQ%3D%3D
+              - separator [ref=e685]
+              - link [ref=e686] [cursor=pointer]:
+                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6Ijg3MTVjOTg0LWM0ZmEtNGI1My05YWU2LWQ5ZWNhOTM0NjliMSIsImRla1ZlcnNpb24iOjEsIml2IjoiTFNPWVZ0NmVRTUdqRy8yZk9rOC8rZz09IiwiY2lwaGVyVGV4dCI6Ikw3VVRFdnpOMEM5ZVRsZHZyYUdGOFNRcVVwcU9kMzVwRUxweUhPRVhZVGVmUHlQY3ZOL3VsQkNyM2NHYzAycndDVjZ1ZHB4ZjRpTmpmU2I5enk5ZFg4N056YmRac1dTWnRTMGptRmJlbmtEQm94djluenBQUC9vPSIsImF1dGhUYWciOiJmU2I5enk5ZFg4N056YmRac1dTWnRRPT0ifQ%3D%3D
+              - link [ref=e687] [cursor=pointer]:
+                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjY2ZTRjNGU2LThhNzUtNDYxMS1iMmJmLTFmZGZlNTZhODc0NyIsImRla1ZlcnNpb24iOjEsIml2IjoiOFIrYlBMS2J5SDluc0Y4MW9LZFliZz09IiwiY2lwaGVyVGV4dCI6IlhoTXUvNVZtRlpRQ3dxckcyRDc3cGt5bnh5VnJkSi9KSCt4SVZ6NWJiRk5VSnBpYnlTT2treVBjRzhUeWZ4WVNsVFVhWG1TVUJMSWFFY3ZtK1FpYWtNZkQwTlRGUk96RDN2RWZtenl5bThoL1o3QmZOYUNuV0c0PSIsImF1dGhUYWciOiJFY3ZtK1FpYWtNZkQwTlRGUk96RDNnPT0ifQ%3D%3D
+              - separator [ref=e688]
+              - link "Description of image." [ref=e689] [cursor=pointer]:
+                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjgzOTE0MDNmLTNiMjYtNDIwMy05ZTAwLTRhYzViNDBhMWVkMCIsImRla1ZlcnNpb24iOjEsIml2IjoiWUpWejRwbVRvaUVKQXhxaXhKN2JJZz09IiwiY2lwaGVyVGV4dCI6IjJjUmk5cHRjM054Y2NrS0plSmpZWGRqbUxLQzRBa1o5K2xhQ2cveDQwN1puRmV2MW5DUThhcVQ1SXE2RytUYzdzZHpOQXQxNGNHT290aFo1VVJYMGNMbVVKeERuM2JXb2VxdDdZSlZ6NHBtVG9pRUpBeHFpeEo3YklnPT0iLCJhdXRoVGFnIjoiZVZFVjlIQzVsQ2NRNTkyMXFIcXJldz09In0%3D
+                - table [ref=e690]:
+                  - rowgroup [ref=e691]:
+                    - row "Description of image." [ref=e692]:
+                      - img "Description of image." [ref=e693]:
+                        - paragraph [ref=e697]: Les offres du printemps
+                        - table [ref=e698]:
+                          - rowgroup [ref=e699]:
+                            - row:
+                              - cell
+                            - row "Jusqu'à -50%" [ref=e700]:
+                              - cell "Jusqu'à -50%" [ref=e701]:
+                                - heading "Jusqu'à -50%" [level=1] [ref=e705]
+                            - row "En ligne et en magasin" [ref=e706]:
+                              - cell "En ligne et en magasin" [ref=e707]:
+                                - paragraph [ref=e710]: En ligne et en magasin
+                        - link "Femme" [ref=e713]:
+                          - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjM3ZDVmYjQyLWNhNzItNDU0OS04ZGM3LTc4NjQ1ODYzYTI4MCIsImRla1ZlcnNpb24iOjEsIml2IjoiVVFWdWtBOGVYeVNZK3J0WUxVR2tqdz09IiwiY2lwaGVyVGV4dCI6Ink4MFAvdjBYOWZ3enJPWkN4c3ZmNzkyVjltY09NUERVaDVFc0wyekZFU3MxM0R4M0d3bHM3cEx3cUFPWXJYUlpmQU0yYWlERHo1VGNaVmNxZ3NCRkcrNk9rT3IyaHpzcmwwRlJCVzZRRHg1ZkpKajZ1MWd0UWFTUCIsImF1dGhUYWciOiJWeXFDd0VVYjdvNlE2dmFIT3l1WFFRPT0ifQ%3D%3D
+                        - link "Homme" [ref=e716]:
+                          - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjdkNTc3NzUwLWRiMDItNDBlMS1hMWY5LTM3ZDcwNTE0NDQ2OSIsImRla1ZlcnNpb24iOjEsIml2IjoiN2E1OFltOXVKU1NqQnBlSUdMb0RMdz09IiwiY2lwaGVyVGV4dCI6IktucUR5T2tFV0dIdTh1MXpEVmp4RktUV21JYUtDNU1QSHFMZ3RvTEEwWm5FUTNyV2orUG0rYWJVK0RhcElCVjAzSlZkeEtwYnFXN0RLMUF0ZHdTL1U5QXpmMzVpTVdoTXZCRHRybnhpYjI0bEpLTUdsNGdZdWdNdiIsImF1dGhUYWciOiJVQzEzQkw5VDBETi9mbUl4YUV5OEVBPT0ifQ%3D%3D
+                        - link "Enfant" [ref=e719]:
+                          - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImJmYjNiODc0LWZjMmItNDEwNC04YzgxLTQ5MGI0ZTMxMDIzOCIsImRla1ZlcnNpb24iOjEsIml2IjoiUk9VNGhCaW5lQTdtd0g3czhOK1JJUT09IiwiY2lwaGVyVGV4dCI6ImlBd0hmZElzc2ZocWVrcTVIVThZNFliNjVqSkY3Y3pwWWNoQUdOc0RRSVAydVBWNGJtV1N2UjhaRTVpLzYzdzdCR1FOWEluQXVTSFNCL0UzZ05FQzBha0oxZ2tCSk00bUphcEU1VGlFR0tkNER1YkFmdXp3MzVFaCIsImF1dGhUYWciOiI4VGVBMFFMUnFRbldDUUVremlZbHFnPT0ifQ%3D%3D
+            - contentinfo "footer" [ref=e720]:
+              - table [ref=e721]:
+                - rowgroup [ref=e722]:
+                  - row "Femme Homme Enfant Trouver Une Boutique Service Client Conditions Générales Confidentialité Et Cookies" [ref=e723]:
+                    - cell "Femme Homme Enfant Trouver Une Boutique Service Client Conditions Générales Confidentialité Et Cookies" [ref=e724]:
+                      - table [ref=e725]:
+                        - rowgroup [ref=e726]:
+                          - row "Femme Homme Enfant Trouver Une Boutique Service Client Conditions Générales Confidentialité Et Cookies" [ref=e727]:
+                            - cell "Femme Homme Enfant Trouver Une Boutique Service Client Conditions Générales Confidentialité Et Cookies" [ref=e728]:
+                              - paragraph [ref=e729]:
+                                - link "Femme" [ref=e730] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6Ijk5ZDc0NWFjLWUxMzktNDNjMy05MGIwLThiMjRlYzEzM2E5NiIsImRla1ZlcnNpb24iOjEsIml2IjoibFBORHcwWUlGNktzZHJCMCtuTUhzQT09IiwiY2lwaGVyVGV4dCI6IlUrQW5SRld6R1hEZzRuMXNudGE4Q3lYSktRbTlraVJsRGk4WFBCVG04MVJSRHRKMW9rSnpKR09DSWxjNXZVL0JRZXlxU1Q3SEd0bGN2Z3RuVHBUbVhpQS9qTFVOcWl6RFE1VHpROE5HQ0JlaXJIYXdkUHB6QjdBPSIsImF1dGhUYWciOiJ2Z3RuVHBUbVhpQS9qTFVOcWl6RFF3PT0ifQ%3D%3D
+                                - link "Homme" [ref=e731] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImFiYmVlNGQ3LTBhZjUtNDBjMy05ZmZhLWU3ZGQ5YmM5OTI3NiIsImRla1ZlcnNpb24iOjEsIml2IjoiQjhvUTMzaVkzS0tzVmhSbk5tNlVzUT09IiwiY2lwaGVyVGV4dCI6ImFxcHp6OCthQTlKSWpvVHZ0RlZDRHpoa2l3WkxTUVNaUzZoTmNKNWpVajdXemVyenBnTFUvYWtHUlA1MWd0TWtvTVAweWxsMEhmOXpqRnQ2eGZrdllvTTZReElHR25KVVdBZktFTjk0bU55aXJGWVVaelp1bExFPSIsImF1dGhUYWciOiJqRnQ2eGZrdllvTTZReElHR25KVVdBPT0ifQ%3D%3D
+                                - link "Enfant" [ref=e732] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjFkZmI1Y2NhLTFhOWEtNDU3NS05YzgzLWQxMWVjNTU2ZTY4YiIsImRla1ZlcnNpb24iOjEsIml2IjoiR2ZDWEo3UHVBenB5MlI2dWJvaUkzZz09IiwiY2lwaGVyVGV4dCI6Ik8xOFlMWWRtcTg5bFRUV3Nrb3NCTGwzcHRubnNjS2cySUcwV3MrUjlSVDgyL2JLM2drdnFGVnd1cTZjMm1DZ1VMMVVUZGxLcTNDWFA0TnpkY3JBYnlrUmhIbkcwM05SWWZSbndseWV6N2dNNmN0a2VybTZJaU40PSIsImF1dGhUYWciOiI0TnpkY3JBYnlrUmhIbkcwM05SWWZRPT0ifQ%3D%3D
+                                - link "Trouver Une Boutique" [ref=e733] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImJjOTRmMjc0LTc5NmItNDAyYy1iNTYxLTBlZjE2OWI5Mzc1NiIsImRla1ZlcnNpb24iOjEsIml2IjoicGNKZmpXS0lIcGZ2cUZTVzJHNkJzQT09IiwiY2lwaGVyVGV4dCI6IkY3YjdUbTZ5djVhc1dHMk1YRlN1dHRXcU1VWVJVamkremUyaldTdnh0SXpJTytWTEZldE5OaEszOENOZFJOcVRYUU9icnRZM09QYUY5WGlvUlRWZHlVaGdpZmhZamE2SDg2WENYNDFpaUI2WDc2aFVsdGh1Z2JBPSIsImF1dGhUYWciOiI5WGlvUlRWZHlVaGdpZmhZamE2SDh3PT0ifQ%3D%3D
+                                - link "Service Client" [ref=e734] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjVkNDM2MGQyLTRjYTMtNDE2ZC05YmNlLTI5NDNiMDU2MjU1MyIsImRla1ZlcnNpb24iOjEsIml2Ijoib29YOS8vWkJlR2FOVkpWUmVmYkhiZz09IiwiY2lwaGVyVGV4dCI6ImMrYnYyWjFwMU1NTE5vT2IwanBqUEhZNzB6OG8xV3VVNGV0R0hFY1RubVE4aGV5Z3p0b3ZXUlNOT0Q2WnJvc2dTeGphTWJYZ3cyblN5Y1NlcjlpL3ZMTXhNeEJoVVVEdGVxS0YvZi8yUVhobWpWU1ZVWG4yeDI0PSIsImF1dGhUYWciOiJ5Y1NlcjlpL3ZMTXhNeEJoVVVEdGVnPT0ifQ%3D%3D
+                                - link "Conditions Générales" [ref=e735] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImM5MzRiYTdhLTUxNDMtNDgyNS05MDE2LWIwYTc4Mzk4YzVmZSIsImRla1ZlcnNpb24iOjEsIml2IjoiQ0JoditONE1oOVVJSHBPcFlQTkd5UT09IiwiY2lwaGVyVGV4dCI6Iml6Q0dkbmJ4Y2dkWVZITWx2NlV1bWw2bFVoMmlVcWQ3Mmp5b3U4MVBFWWxSaTFsUk1qT2ZHVmphcGJORlhPeFJSaVVSL1c4WHllRDI5dDcrbjhkaG45cnVqMDFqNURXMTVBZ1liL2plRElmVkNCNlRxV0R6UnNrPSIsImF1dGhUYWciOiI5dDcrbjhkaG45cnVqMDFqNURXMTVBPT0ifQ%3D%3D
+                                - link "Confidentialité Et Cookies" [ref=e736] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImZmNjQ4YjMzLTM3ZDAtNDExYi1hNTFiLWE1ZjU1NGE2MWMyZiIsImRla1ZlcnNpb24iOjEsIml2IjoiQ05iaHNTU2tzdXNwajF6UnplVGMvZz09IiwiY2lwaGVyVGV4dCI6InpMYXRxam9vWVRKVjc2RjVqNy9EZDhpQUk5dW5xWDNsVE5RMlBTTUs0Wk4vUlFFVUpLV2k1R1BoV1FFc2h2ZVhPd2JhQXhWOC9YYkNCVVhlWlY1alFrWUFBeWZlczh1NllBalc0YkVrcExMcktZOWMwYzNrM1A0PSIsImF1dGhUYWciOiJCVVhlWlY1alFrWUFBeWZlczh1NllBPT0ifQ%3D%3D
+              - table [ref=e737]:
+                - rowgroup [ref=e738]:
+                  - row "Votre carte de membre" [ref=e739]:
+                    - cell "Votre carte de membre" [ref=e740]:
+                      - table [ref=e741]:
+                        - rowgroup [ref=e742]:
+                          - row "Votre carte de membre" [ref=e743]:
+                            - cell "Votre carte de membre" [ref=e744]:
+                              - paragraph [ref=e745]: Votre carte de membre
+                  - 'row "Member ID: 17600828142977" [ref=e746]':
+                    - 'cell "Member ID: 17600828142977" [ref=e747]':
+                      - table [ref=e748]:
+                        - rowgroup [ref=e749]:
+                          - row [ref=e750]:
+                            - img [ref=e751]:
+                              - img "Picture of barcode" [ref=e752]
+                          - 'row "Member ID: 17600828142977" [ref=e753]':
+                            - 'cell "Member ID: 17600828142977" [ref=e754]':
+                              - paragraph [ref=e755]: "Member ID: 17600828142977"
+                  - row "Ajouter À L'app Cartes Apple Ajouter À L'app Cartes Google" [ref=e756]:
+                    - cell "Ajouter À L'app Cartes Apple Ajouter À L'app Cartes Google" [ref=e757]:
+                      - table [ref=e758]:
+                        - rowgroup [ref=e759]:
+                          - row "Ajouter À L'app Cartes Apple" [ref=e760]:
+                            - cell "Ajouter À L'app Cartes Apple" [ref=e761]:
+                              - link "Ajouter À L'app Cartes Apple" [ref=e762] [cursor=pointer]:
+                                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImI2ZDM1NWQ4LWFhZmYtNGIzYy04ZThlLTE1MTM0MmFjODZkOCIsImRla1ZlcnNpb24iOjEsIml2IjoiWDFuYnY5VjlVN2NZOENvUmwyNGErZz09IiwiY2lwaGVyVGV4dCI6Im16MVZ2c2MrN2NyZm0ydkI0NE1FUkRFSnpST1kyNFZQM1B0V2s3RWx4YVA0N0ozVWgwRU5qRCtmWU9JL0tyZHVjbjQ4aHo0RU1ZUEttTXJPV0NyR3daSWpuNjZzODRjWEVGOVoyNy9WZlZPM0dQQXFFWmR1R3ZvPSIsImF1dGhUYWciOiJtTXJPV0NyR3daSWpuNjZzODRjWEVBPT0ifQ%3D%3D
+                          - row "Ajouter À L'app Cartes Google" [ref=e763]:
+                            - cell "Ajouter À L'app Cartes Google" [ref=e764]:
+                              - link "Ajouter À L'app Cartes Google" [ref=e765] [cursor=pointer]:
+                                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6ImM2M2NmY2FjLTIxYTQtNDY3YS05NjBjLTE3NGZkMmYwMmY0YSIsImRla1ZlcnNpb24iOjEsIml2IjoiYmNIcFBwaGRoeVFhMUlyZmdneWZEQT09IiwiY2lwaGVyVGV4dCI6ImdydnJLLzA1QmV1MlJVRTJHVFltanA5ZVNWeW8zN2cwN3ltdkVwYi9lTitHWmw5K3l6bTJoa2VBNEliUTBZSHRadW90ckN1MENlYmNhdFVYQjRXRm1scXh5N3pRU2JFY0ZtM0I2VDZZWFlja0d0U0szNElNbnd3PSIsImF1dGhUYWciOiJhdFVYQjRXRm1scXh5N3pRU2JFY0ZnPT0ifQ%3D%3D
+              - table [ref=e766]:
+                - rowgroup [ref=e767]:
+                  - row [ref=e768]:
+                    - cell [ref=e769]:
+                      - table [ref=e770]:
+                        - rowgroup [ref=e771]:
+                          - row "Pour vous désabonner des communications par e-mail, cliquez ici." [ref=e772]:
+                            - cell "Pour vous désabonner des communications par e-mail, cliquez ici." [ref=e773]:
+                              - paragraph [ref=e774]:
+                                - link "Pour vous désabonner des communications par e-mail, cliquez ici." [ref=e775] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjgzMDY2OTQzLWM2NzAtNDcyNy05ZDk3LWVjOTdkNDhiZjJiZCIsImRla1ZlcnNpb24iOjEsIml2IjoicWhGU29sRUNieThSamtYVE8xWkN6Zz09IiwiY2lwaGVyVGV4dCI6InpvMGVWR0pRV3ZkejA2VFpFblFvYi9QZy8wU1FmZXpicE81NFBpRjh2dk1udHZhcGd5alRBRk0zZTVnQ3BBUGRmbUVEdDlrc09zNzI5SFEzUCs3YWQyYTRSLzV5Z3NyWnZLb1JVcUpSQW04dkVZNUYwenRXUXM0PSIsImF1dGhUYWciOiI5SFEzUCs3YWQyYTRSLzV5Z3NyWnZBPT0ifQ%3D%3D
+                          - row "Si vous ne souhaitez plus être membre Tommy Together, connectez-vous et suivez les instructions dans la section Détails de votre compte." [ref=e776]:
+                            - cell "Si vous ne souhaitez plus être membre Tommy Together, connectez-vous et suivez les instructions dans la section Détails de votre compte." [ref=e777]:
+                              - paragraph [ref=e778]:
+                                - link "Si vous ne souhaitez plus être membre Tommy Together, connectez-vous et suivez les instructions dans la section Détails de votre compte." [ref=e779] [cursor=pointer]:
+                                  - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjRlODhmMGRlLTZhOWItNGI3MS04YjgxLTBjNWFjNmQ2ZDlmMSIsImRla1ZlcnNpb24iOjEsIml2IjoiUHhLVEZLVmR0bjVUM0ZuZTdLazRuZz09IiwiY2lwaGVyVGV4dCI6InY5SkU1clk5Z3N4TTE0UDhjSzFQbnlDV3hrQTlTY0hYMnJxR2F6NjRVZG9kOEtsT1B6KzladlhQSklIeDZTZ24xQ1BId1RLZXAxcUJwdlpnNXRyUDJ3dlpXNGg1ODFLM1BqOFNreFNsWGJaK1U5eFozdXlwT0o0PSIsImF1dGhUYWciOiJwdlpnNXRyUDJ3dlpXNGg1ODFLM1BnPT0ifQ%3D%3D
+                          - row "* L'offre jusqu'à -50% est valable en ligne et en magasin du 19/03/2026 au 06/04/2026, hors outlets. Valable sur les articles des offres, dans la limite des stocks disponibles. Offre non cumulable avec d'autres codes promotionnels et non valable sur les achats antérieurs. Nulle et non avenue partout où la loi l'interdit." [ref=e780]:
+                            - cell "* L'offre jusqu'à -50% est valable en ligne et en magasin du 19/03/2026 au 06/04/2026, hors outlets. Valable sur les articles des offres, dans la limite des stocks disponibles. Offre non cumulable avec d'autres codes promotionnels et non valable sur les achats antérieurs. Nulle et non avenue partout où la loi l'interdit." [ref=e781]:
+                              - paragraph [ref=e782]: "* L'offre jusqu'à -50% est valable en ligne et en magasin du 19/03/2026 au 06/04/2026, hors outlets. Valable sur les articles des offres, dans la limite des stocks disponibles. Offre non cumulable avec d'autres codes promotionnels et non valable sur les achats antérieurs. Nulle et non avenue partout où la loi l'interdit."
+                          - row [ref=e783]:
+                            - cell [ref=e784]:
+                              - paragraph [ref=e785]:
+                                - text: Cette offre de réduction est valable jusqu'au 05/05/2026 et ne peut être utilisée qu'une seule fois, soit en ligne, soit dans l'un des magasins Tommy Hilfiger participants, à l'exception des pays ci-dessous. Pour les achats en ligne, vous devez vous connecter et utiliser le code au moment du paiement. Les offres de réduction Tommy Hilfiger sont limitées à une par client, par commande ou par achat en magasin. La réduction est réservée au bénéficiaire et ne peut pas être partagée avec d'autres personnes. Elle n'est pas cumulable avec d'autres codes promotionnels ni valable sur les produits sujets à des offres. La valeur de l'offre n'est pas remboursable lors du retour ou de l'échange d'un achat. Cette offre ne peut pas être échangée contre de l'argent. La réduction s'applique au total de votre achat. Elle est soumise aux conditions générales de Tommy Together, que vous pouvez consulter
+                                - link "ici" [ref=e786] [cursor=pointer]:
+                                  - /url: https://fr.tommy.com/tommy-together-terms-conditions
+                                - text: ". Dans les pays suivants, les offres peuvent uniquement être utilisées en ligne et non en magasin : Espagne, Portugal, Estonie, Lettonie, Lituanie, Slovénie, Slovaquie, Hongrie"
+                          - 'row "Tommy Hilfiger Europe B.V., Danzigerkade 165 1013 AP Amsterdam, chambre de commerce d''Amsterdam no 33290078 |Directeur: Filipe Lima. © 2024 Tommy Hilfiger Licensing LLC. Tous droits réservés." [ref=e787]':
+                            - 'cell "Tommy Hilfiger Europe B.V., Danzigerkade 165 1013 AP Amsterdam, chambre de commerce d''Amsterdam no 33290078 |Directeur: Filipe Lima. © 2024 Tommy Hilfiger Licensing LLC. Tous droits réservés." [ref=e788]':
+                              - paragraph [ref=e789]:
+                                - text: "Tommy Hilfiger Europe B.V., Danzigerkade 165 1013 AP Amsterdam, chambre de commerce d'Amsterdam no 33290078 |Directeur: Filipe Lima."
+                                - text: © 2024 Tommy Hilfiger Licensing LLC. Tous droits réservés.
+                          - 'row "Icon: Instagram Icon: TikTok Icon: Facebook Icon: X Icon: YouTube" [ref=e790]':
+                            - 'cell "Icon: Instagram Icon: TikTok Icon: Facebook Icon: X Icon: YouTube" [ref=e791]':
+                              - 'link "Icon: Instagram" [ref=e792] [cursor=pointer]':
+                                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjhmMWM2YzQxLThkM2MtNDYzZS05NDliLTM1ZDJjYWE2OWJhOCIsImRla1ZlcnNpb24iOjEsIml2IjoiRUFqaThaSVc0WmZwV2I1ajdYMzN2dz09IiwiY2lwaGVyVGV4dCI6IlFFc1JEWFQ0R3d5ckVrS1BBRFRxanV2eGFUUVRJbUJlSGhnWHp3T3VsOVVuRjFHYmlLb3ZDS2IvMythTDlCbW1KTkplbzlSVW5Vb3JzUEY2VFA1b3Zudm1LSmxvclQ2dkt4QUk0dkdTRnVHWDZWbStZKzE5OTc4PSIsImF1dGhUYWciOiJzUEY2VFA1b3Zudm1LSmxvclQ2dkt3PT0ifQ%3D%3D
+                                - 'img "Icon: Instagram" [ref=e793]'
+                              - 'link "Icon: TikTok" [ref=e794] [cursor=pointer]':
+                                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjllZDg0MDc2LWM3OTEtNDI2Mi1iN2ZjLWYyYTA5OWY5ZDkyZiIsImRla1ZlcnNpb24iOjEsIml2IjoicWpJaWJWWlF0a1VZNlNOQVRzVm9PUT09IiwiY2lwaGVyVGV4dCI6InJZU3Ixci9HZG1neHBqUS9RTUtLWng3UW5NUVRtVDJGNW9DR2VKRmFDcklGNnhBMktFS2Fkd2JtTDcyYU1xSEU0QW5OT3NjeFR3S0M0ZFJMM1gxQzI0ZlJMeVcrMjlhbTI2b3lJbTFXVUxaRkdPa2pRRTdGYURrPSIsImF1dGhUYWciOiI0ZFJMM1gxQzI0ZlJMeVcrMjlhbTJ3PT0ifQ%3D%3D
+                                - 'img "Icon: TikTok" [ref=e795]'
+                              - 'link "Icon: Facebook" [ref=e796] [cursor=pointer]':
+                                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6Ijg5ZDEyYzljLTM1ZjctNGE3Yi05YjY2LWRjOGNmNTVjNzE2MyIsImRla1ZlcnNpb24iOjEsIml2IjoialZXQTRoT1Y4NVJuSWV2aUgwb2ZyUT09IiwiY2lwaGVyVGV4dCI6IktIOTI3SmtNOGVWMHBsNWpVZjlMU2lpaWhnK2hLZCs0aWJ2ekJCWXlrMUkwSlZOdlFIaXA3bjhGLzdOVWpDWG1XYUtqU1EwbXRQeitpRGF2ZmxYdk54dmFsdVZ2V1l0K2ZvMVZnT0lUbGZPVVp5SHI0aDlLSDYwPSIsImF1dGhUYWciOiJpRGF2ZmxYdk54dmFsdVZ2V1l0K2ZnPT0ifQ%3D%3D
+                                - 'img "Icon: Facebook" [ref=e797]'
+                              - 'link "Icon: X" [ref=e798] [cursor=pointer]':
+                                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjAyOGI4N2M5LTMxYzMtNGQ0MC04YjNiLTJiMmQwNDZlNmQzZCIsImRla1ZlcnNpb24iOjEsIml2IjoiVTBpQVlpRlM1RlpXR1lBSEtSd2tkQT09IiwiY2lwaGVyVGV4dCI6IldkV2RCd2FLZ1d5VTk2c2FKc21TZkRZQjhSdFdFU0VaYllISlhUcURGbVRzSGM4MUFIbjR0V2JMUnJYVVUwMS9yLy85SlpieldlTW8yb3F1b2pRcnQ1TlhLTUFjUXQrbGxWTklnR0loVXVSV1ZobUFCeWtjSkhRPSIsImF1dGhUYWciOiIyb3F1b2pRcnQ1TlhLTUFjUXQrbGxRPT0ifQ%3D%3D
+                                - 'img "Icon: X" [ref=e799]'
+                              - 'link "Icon: YouTube" [ref=e800] [cursor=pointer]':
+                                - /url: https://click.mailing.tommy.com/?qs=eyJkZWtJZCI6IjVjOGJmYjc1LTM0OWQtNDU2My04YjZmLTgzMzg3OTI0YzM1OCIsImRla1ZlcnNpb24iOjEsIml2IjoiN0dkc1RkL0ZPV21FQjU3dkJqSVIyUT09IiwiY2lwaGVyVGV4dCI6IldBbGw2Q1pJa2lrTFBnam9yclNBbXlyblFGQ09kY1V3WE5iNWNMcXYyaXBUNEpEU1BkK29XVTBzLzgvSU1UL09KSGFrSFZ0enJCaU13eFFONFBuMXZldlF3N2JHaXFOSk0reG5iRTNmeFRscGhBZWU3d1l5RWRrPSIsImF1dGhUYWciOiJ3eFFONFBuMXZldlF3N2JHaXFOSk13PT0ifQ%3D%3D
+                                - 'img "Icon: YouTube" [ref=e801]'
+        - generic [ref=e802]:
+          - generic [ref=e804]:
+            - img [ref=e805]
+            - text: Assistant IA
+          - generic [ref=e809]:
+            - combobox [ref=e810]:
+              - option "Haiku (rapide)"
+              - option "Sonnet (recommandé)" [selected]
+              - option "Opus (complexe)"
+            - 'textbox "Instructions (ex: proposer intervention mardi, tutoyer...)" [ref=e811]'
+            - button "Générer" [ref=e812]:
+              - img [ref=e813]
+              - text: Générer
+        - button "Répondre sans IA" [ref=e819]:
+          - img [ref=e820]
+          - text: Répondre sans IA

@@ -36,7 +36,7 @@ export default function Categories() {
         icon: editCat.icon,
         autoreply_enabled: editCat.autoreply_enabled ?? false,
         autoreply_prompt: editCat.autoreply_prompt ?? '',
-        default_model: editCat.default_model ?? 'sonnet',
+        default_model: editCat.default_model ?? 'gpt4o-mini',
       }).eq('id', editCat.id)
     } else {
       await supabase.from('inbox_categories').insert({
@@ -47,7 +47,7 @@ export default function Categories() {
         org_id: 'default',
         autoreply_enabled: editCat.autoreply_enabled ?? false,
         autoreply_prompt: editCat.autoreply_prompt ?? '',
-        default_model: editCat.default_model ?? 'sonnet',
+        default_model: editCat.default_model ?? 'gpt4o-mini',
       })
     }
     setEditCat(null)
@@ -104,7 +104,7 @@ export default function Categories() {
             Catégories
           </h2>
           <button
-            onClick={() => setEditCat({ name: '', color: '#2563eb', icon: 'tag', autoreply_enabled: false, autoreply_prompt: '', default_model: 'sonnet' })}
+            onClick={() => setEditCat({ name: '', color: '#2563eb', icon: 'tag', autoreply_enabled: false, autoreply_prompt: '', default_model: 'gpt4o-mini' })}
             className="flex items-center gap-1 px-3 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-primary-hover transition-colors"
           >
             <Plus size={14} />
@@ -183,12 +183,13 @@ export default function Categories() {
                 <label className="text-xs text-text-muted mb-1 block">Modèle IA par défaut</label>
                 <select
                   value={editCat.default_model ?? 'sonnet'}
-                  onChange={e => setEditCat({ ...editCat, default_model: e.target.value as 'haiku' | 'sonnet' | 'opus' })}
+                  onChange={e => setEditCat({ ...editCat, default_model: e.target.value as 'gpt4o-mini' | 'gpt4o' | 'sonnet' | 'opus' })}
                   className="text-sm border border-border rounded-lg px-3 py-2"
                 >
-                  <option value="haiku">Haiku — rapide, orthographe, mails simples</option>
-                  <option value="sonnet">Sonnet — recommandé, bon pour la plupart des mails</option>
-                  <option value="opus">Opus — complexe, litiges, négociations</option>
+                  <option value="gpt4o-mini">GPT-4o mini — rapide, pas cher, mails simples</option>
+                  <option value="gpt4o">GPT-4o — qualité, ton naturel</option>
+                  <option value="sonnet">Sonnet — Anthropic, suivi d'instructions</option>
+                  <option value="opus">Opus — Anthropic, sujets complexes</option>
                 </select>
               </div>
 
