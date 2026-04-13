@@ -43,6 +43,20 @@ export default function ThreadDetail({ thread, onClose }: Props) {
 
   async function loadMessages() {
     setLoading(true)
+    // Reset state immediately when thread changes
+    setDraftReply('')
+    setSummary(null)
+    setEditMode(false)
+    setInstructions('')
+    setMessages([])
+
+    // Fetch fresh thread data (for up-to-date draft_reply)
+    const { data: freshThread } = await supabase
+      .from('inbox_threads')
+      .select('draft_reply')
+      .eq('id', thread.id)
+      .single()
+
     const { data } = await supabase
       .from('inbox_messages')
       .select('*')
@@ -50,10 +64,7 @@ export default function ThreadDetail({ thread, onClose }: Props) {
       .order('sent_at', { ascending: false })
     setMessages(data || [])
     setLoading(false)
-    setDraftReply(thread.draft_reply || '')
-    setSummary(null)
-    setEditMode(false)
-    setInstructions('')
+    setDraftReply(freshThread?.draft_reply || '')
   }
 
   async function loadSummary() {
